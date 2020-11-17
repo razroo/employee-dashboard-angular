@@ -29,6 +29,9 @@
     "employee-dashboard-e2e": {
       "tags": [],
       "implicitDependencies": ["employee-dashboard"]
+    },
+    "employees": {
+      "tags": []
     }
   }
 }

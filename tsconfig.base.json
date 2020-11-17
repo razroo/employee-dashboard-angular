@@ -15,7 +15,11 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@razroo-fully-architected-dashboard/employees": [
+        "libs/employees/src/index.ts"
+      ]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
