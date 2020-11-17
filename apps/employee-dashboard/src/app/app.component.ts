@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'employee-dashboard';
+  title = 'Razroo | Fully Architected Employee Dashboard';
 }
