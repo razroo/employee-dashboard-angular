@@ -18,7 +18,8 @@
     "paths": {
       "@razroo-fully-architected-dashboard/employees": [
         "libs/employees/src/index.ts"
-      ]
+      ],
+      "@razroo-fully-architected-dashboard/ui": ["libs/ui/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

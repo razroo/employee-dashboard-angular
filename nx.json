@@ -32,6 +32,9 @@
     },
     "employees": {
       "tags": []
+    },
+    "ui": {
+      "tags": []
     }
   }
 }
