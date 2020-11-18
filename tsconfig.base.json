@@ -19,7 +19,10 @@
       "@razroo-fully-architected-dashboard/employees": [
         "libs/employees/src/index.ts"
       ],
-      "@razroo-fully-architected-dashboard/ui": ["libs/ui/src/index.ts"]
+      "@razroo-fully-architected-dashboard/ui": ["libs/ui/src/index.ts"],
+      "@razroo-fully-architected-dashboard/ui/common": [
+        "libs/ui/common/src/index.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]
