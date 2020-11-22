@@ -6,10 +6,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { UiCommonModule } from '@razroo-fully-architected-dashboard/ui/common';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list';
 
 @NgModule({
   imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule,
-    UiCommonModule, MatToolbarModule],
+    UiCommonModule, MatToolbarModule, MatSidenavModule, MatListModule],
   declarations: [AppComponent],
   providers: [],
   bootstrap: [AppComponent],
