@@ -4,10 +4,11 @@ import { LayoutComponent } from './layout/layout.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { RouterModule } from '@angular/router';
+import { DataTableComponent } from './data-table/data-table.component';
 
 @NgModule({
   imports: [CommonModule, MatSidenavModule, MatToolbarModule, RouterModule],
-  declarations: [LayoutComponent],
-  exports: [LayoutComponent],
+  declarations: [LayoutComponent, DataTableComponent],
+  exports: [LayoutComponent, DataTableComponent],
 })
 export class UiCommonModule {}
