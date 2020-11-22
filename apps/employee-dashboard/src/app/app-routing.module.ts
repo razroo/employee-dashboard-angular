@@ -4,7 +4,8 @@ import { NgModule } from '@angular/core';
 const routes: Routes = [
   {
     path: '',
-    loadChildren: () => import('@razroo-fully-architected-dashboard/employees').then(m => m.EmployeesModule)
+    loadChildren: () => import('@razroo-fully-architected-dashboard/employees').then(m => m.EmployeesModule),
+    pathMatch: 'full'
   },
   {
     path: 'employees',
@@ -12,7 +13,7 @@ const routes: Routes = [
   },
   {
     path: '**',
-    redirectTo: '/'
+    redirectTo: ''
   },
 ];
 
