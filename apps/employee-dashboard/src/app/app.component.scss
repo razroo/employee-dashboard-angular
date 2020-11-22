@@ -1,3 +1,4 @@
 .mat-drawer-container {
-  height: 100%;
+  $toolbar-height: 64px;
+  height: calc(100% - #{$toolbar-height});
 }
