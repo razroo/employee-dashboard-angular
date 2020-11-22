@@ -22,6 +22,9 @@
       "@razroo-fully-architected-dashboard/ui": ["libs/ui/src/index.ts"],
       "@razroo-fully-architected-dashboard/ui/common": [
         "libs/ui/common/src/index.ts"
+      ],
+      "@razroo-fully-architected-dashboard/repo-data": [
+        "libs/repo-data/src/index.ts"
       ]
     }
   },

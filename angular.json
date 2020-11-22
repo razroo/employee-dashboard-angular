@@ -25,7 +25,10 @@
               "apps/employee-dashboard/src/favicon.ico",
               "apps/employee-dashboard/src/assets"
             ],
-            "styles": ["./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css", "apps/employee-dashboard/src/styles.scss"],
+            "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
+              "apps/employee-dashboard/src/styles.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -185,6 +188,32 @@
           "builder": "@nrwl/jest:jest",
           "options": {
             "jestConfig": "libs/ui/common/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      }
+    },
+    "repo-data": {
+      "projectType": "library",
+      "root": "libs/repo-data",
+      "sourceRoot": "libs/repo-data/src",
+      "prefix": "razroo-fully-architected-dashboard",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/repo-data/src/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/repo-data/jest.config.js",
             "passWithNoTests": true
           }
         }

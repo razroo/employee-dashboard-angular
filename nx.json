@@ -38,6 +38,9 @@
     },
     "ui-common": {
       "tags": []
+    },
+    "repo-data": {
+      "tags": []
     }
   }
 }
