@@ -1,17 +1,19 @@
 <header class="flex">
-  <mat-toolbar></mat-toolbar>
+  <mat-toolbar>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+  </mat-toolbar>
 </header>
-<main>
-  <mat-sidenav-container>
-    <mat-sidenav #snav>
-      <mat-nav-list>
-        <a mat-list-item routerLink="." >Test Nav</a>
-      </mat-nav-list>
-    </mat-sidenav>
 
-    <mat-sidenav-content>
-      <router-outlet></router-outlet>
-    </mat-sidenav-content>
-  </mat-sidenav-container>
+<mat-sidenav-container>
+  <mat-sidenav #snav>
+    <mat-nav-list>
+      <a mat-list-item routerLink="." >Test Nav</a>
+    </mat-nav-list>
+  </mat-sidenav>
 
-</main>
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

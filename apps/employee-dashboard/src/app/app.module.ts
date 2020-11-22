@@ -8,10 +8,13 @@ import { UiCommonModule } from '@razroo-fully-architected-dashboard/ui/common';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule,
-    UiCommonModule, MatToolbarModule, MatSidenavModule, MatListModule],
+    UiCommonModule, MatToolbarModule, MatSidenavModule, MatListModule,
+    MatIconModule, MatButtonModule],
   declarations: [AppComponent],
   providers: [],
   bootstrap: [AppComponent],
