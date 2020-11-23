@@ -44,6 +44,9 @@
     },
     "tickets": {
       "tags": []
+    },
+    "analytics": {
+      "tags": []
     }
   }
 }

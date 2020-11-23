@@ -6,5 +6,6 @@ module.exports = {
     '<rootDir>/libs/ui/common',
     '<rootDir>/libs/repo-data',
     '<rootDir>/libs/tickets',
+    '<rootDir>/libs/analytics',
   ],
 };
