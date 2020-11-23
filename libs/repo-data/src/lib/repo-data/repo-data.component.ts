@@ -2,22 +2,24 @@ import { Component, OnInit } from '@angular/core';
 import { TableColumn } from '@razroo-fully-architected-dashboard/ui/common';
 
 const ELEMENT_DATA = [
-  {name: 'test', position: 'test position', location: 'New York',
-    permission: 'test permission', reportTo: 'no one'},
-  {name: 'test', position: 'test position', location: 'Los Angelos',
-    permission: 'test permission', reportTo: 'no one'},
-  {name: 'test', position: 'test position', location: 'Alabama',
-    permission: 'test permission', reportTo: 'no one'},
-  {name: 'test', position: 'test position', location: 'new york',
-    permission: 'test permission', reportTo: 'no one'},
-  {name: 'test', position: 'test position', location: 'new york',
-    permission: 'test permission', reportTo: 'no one'},
-  {name: 'test', position: 'test position', location: 'new york',
-    permission: 'test permission', reportTo: 'no one'},
-  {name: 'test', position: 'test position', location: 'new york',
-    permission: 'test permission', reportTo: 'no one'},
-  {name: 'test', position: 'test position', location: 'new york',
-    permission: 'test permission', reportTo: 'no one'},
+  {repoName: 'Fantastic Beasts', stars: '10322', forks: '1000',
+    mergedPullRequests: '200', watchers: 'people go here', commits: '10000',
+    closedIssues: '231'},
+  {repoName: 'Fantastic Beasts', stars: '10322', forks: '1000',
+    mergedPullRequests: '200', watchers: 'people go here', commits: '10000',
+    closedIssues: '231'},
+  {repoName: 'Fantastic Beasts', stars: '10322', forks: '1000',
+    mergedPullRequests: '200', watchers: 'people go here', commits: '10000',
+    closedIssues: '231'},
+  {repoName: 'Fantastic Beasts', stars: '10322', forks: '1000',
+    mergedPullRequests: '200', watchers: 'people go here', commits: '10000',
+    closedIssues: '231'},
+  {repoName: 'Fantastic Beasts', stars: '10322', forks: '1000',
+    mergedPullRequests: '200', watchers: 'people go here', commits: '10000',
+    closedIssues: '231'},
+  {repoName: 'Fantastic Beasts', stars: '10322', forks: '1000',
+    mergedPullRequests: '200', watchers: 'people go here', commits: '10000',
+    closedIssues: '231'},
 ];
 
 @Component({
@@ -36,28 +38,38 @@ export class RepoDataComponent implements OnInit {
 
     this.repoDataTableColumns = [
       {
-        name: 'Name',
-        dataKey: 'name',
+        name: 'Repo Name',
+        dataKey: 'repoName',
         isSortable: true,
       },
       {
-        name: 'Position',
-        dataKey: 'position',
+        name: 'Stars',
+        dataKey: 'stars',
         isSortable: true,
       },
       {
-        name: 'Location',
-        dataKey: 'location',
+        name: 'Forks',
+        dataKey: 'forks',
         isSortable: true,
       },
       {
-        name: 'Permission',
-        dataKey: 'permission',
+        name: 'Merged Pull Requests',
+        dataKey: 'mergedPullRequests',
         isSortable: true,
       },
       {
-        name: 'Report To',
-        dataKey: 'reportTo',
+        name: 'Watchers',
+        dataKey: 'watchers',
+        isSortable: true,
+      },
+      {
+        name: 'Commits',
+        dataKey: 'commits',
+        isSortable: true,
+      },
+      {
+        name: 'Closed Issues',
+        dataKey: 'closedIssues',
         isSortable: true,
       }
     ];
