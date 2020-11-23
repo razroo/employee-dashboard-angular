@@ -20,6 +20,10 @@ const routes: Routes = [
     loadChildren: () => import('@razroo-fully-architected-dashboard/tickets').then(m => m.TicketsModule)
   },
   {
+    path: 'analytics',
+    loadChildren: () => import('@razroo-fully-architected-dashboard/analytics').then(m => m.AnalyticsModule)
+  },
+  {
     path: '**',
     redirectTo: ''
   },

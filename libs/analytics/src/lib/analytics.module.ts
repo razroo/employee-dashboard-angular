@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule, Route } from '@angular/router';
-
-export const analyticsRoutes: Route[] = [];
+import { AnalyticsComponent } from './analytics/analytics.component';
+import { AnalyticsRoutingModule } from './analytics-routing.module';
 
 @NgModule({
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, AnalyticsRoutingModule],
+  declarations: [AnalyticsComponent],
 })
 export class AnalyticsModule {}
