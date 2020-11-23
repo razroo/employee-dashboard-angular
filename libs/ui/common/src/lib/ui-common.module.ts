@@ -7,10 +7,12 @@ import { RouterModule } from '@angular/router';
 import { DataTableComponent } from './data-table/data-table.component';
 import {MatTableModule} from '@angular/material/table';
 import { DataPropertyGetterPipe } from './data-table/data-property-getter.pipe';
+import { MatSortModule } from '@angular/material/sort';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 @NgModule({
   imports: [CommonModule, MatSidenavModule, MatToolbarModule, RouterModule,
-    MatTableModule],
+    MatTableModule, MatSortModule, MatPaginatorModule],
   declarations: [LayoutComponent, DataTableComponent, DataPropertyGetterPipe],
   exports: [LayoutComponent, DataTableComponent],
 })

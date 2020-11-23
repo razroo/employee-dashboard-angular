@@ -37,23 +37,28 @@ export class EmployeesComponent implements OnInit {
     this.employeeTableColumns = [
       {
         name: 'Name',
-        dataKey: 'name'
+        dataKey: 'name',
+        isSortable: true,
       },
       {
         name: 'Position',
-        dataKey: 'position'
+        dataKey: 'position',
+        isSortable: true,
       },
       {
         name: 'Location',
-        dataKey: 'location'
+        dataKey: 'location',
+        isSortable: true,
       },
       {
         name: 'Permission',
-        dataKey: 'permission'
+        dataKey: 'permission',
+        isSortable: true,
       },
       {
         name: 'Report To',
-        dataKey: 'reportTo'
+        dataKey: 'reportTo',
+        isSortable: true,
       }
     ];
   }
