@@ -1,12 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule, Route } from '@angular/router';
 import { RepoDataComponent } from './repo-data/repo-data.component';
-
-export const repoDataRoutes: Route[] = [];
+import { RepoDataRoutingModule } from './repo-data/repo-data-routing.module';
 
 @NgModule({
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RepoDataRoutingModule],
   declarations: [RepoDataComponent],
 })
 export class RepoDataModule {}
