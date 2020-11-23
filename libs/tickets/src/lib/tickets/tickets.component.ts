@@ -2,22 +2,31 @@ import { Component, OnInit } from '@angular/core';
 import { TableColumn } from '@razroo-fully-architected-dashboard/ui/common';
 
 const ELEMENT_DATA = [
-  {name: 'test', position: 'test position', location: 'New York',
-    permission: 'test permission', reportTo: 'no one'},
-  {name: 'test', position: 'test position', location: 'Los Angelos',
-    permission: 'test permission', reportTo: 'no one'},
-  {name: 'test', position: 'test position', location: 'Alabama',
-    permission: 'test permission', reportTo: 'no one'},
-  {name: 'test', position: 'test position', location: 'new york',
-    permission: 'test permission', reportTo: 'no one'},
-  {name: 'test', position: 'test position', location: 'new york',
-    permission: 'test permission', reportTo: 'no one'},
-  {name: 'test', position: 'test position', location: 'new york',
-    permission: 'test permission', reportTo: 'no one'},
-  {name: 'test', position: 'test position', location: 'new york',
-    permission: 'test permission', reportTo: 'no one'},
-  {name: 'test', position: 'test position', location: 'new york',
-    permission: 'test permission', reportTo: 'no one'},
+  {employeeName: 'Charlie Greenman', projectName: 'Razroo Angular Dashboard',
+    shortDescription: 'Test short description', ticketNumber: 'test permission',
+    ticketLink: 'no one', reporterName: 'Jay Zee', designLink: 'test link goes here'},
+  {employeeName: 'Charlie Greenman', projectName: 'Razroo Angular Dashboard',
+    shortDescription: 'Test short description', ticketNumber: 'test permission',
+    ticketLink: 'no one', reporterName: 'Jay Zee', designLink: 'test link goes here'},
+  {employeeName: 'Charlie Greenman', projectName: 'Razroo Angular Dashboard',
+    shortDescription: 'Test short description', ticketNumber: 'test permission',
+    ticketLink: 'no one', reporterName: 'Jay Zee', designLink: 'test link goes here'},
+  {employeeName: 'Charlie Greenman', projectName: 'Razroo Angular Dashboard',
+    shortDescription: 'Test short description', ticketNumber: 'test permission',
+    ticketLink: 'no one', reporterName: 'Jay Zee', designLink: 'test link goes here'},
+  {employeeName: 'Charlie Greenman', projectName: 'Razroo Angular Dashboard',
+    shortDescription: 'Test short description', ticketNumber: 'test permission',
+    ticketLink: 'no one', reporterName: 'Jay Zee', designLink: 'test link goes here'},
+  {employeeName: 'Charlie Greenman', projectName: 'Razroo Angular Dashboard',
+    shortDescription: 'Test short description', ticketNumber: 'test permission',
+    ticketLink: 'no one', reporterName: 'Jay Zee', designLink: 'test link goes here'},
+  {employeeName: 'Charlie Greenman', projectName: 'Razroo Angular Dashboard',
+    shortDescription: 'Test short description', ticketNumber: 'test permission',
+    ticketLink: 'no one', reporterName: 'Jay Zee', designLink: 'test link goes here'},
+  {employeeName: 'Charlie Greenman', projectName: 'Razroo Angular Dashboard',
+    shortDescription: 'Test short description', ticketNumber: 'test permission',
+    ticketLink: 'no one', reporterName: 'Jay Zee', designLink: 'test link goes here'},
+
 ];
 
 @Component({
@@ -36,28 +45,38 @@ export class TicketsComponent implements OnInit {
 
     this.ticketsTableColumns = [
       {
-        name: 'Name',
-        dataKey: 'name',
+        name: 'Employee Name',
+        dataKey: 'employeeName',
         isSortable: true,
       },
       {
-        name: 'Position',
-        dataKey: 'position',
+        name: 'Project Name',
+        dataKey: 'projectName',
         isSortable: true,
       },
       {
-        name: 'Location',
-        dataKey: 'location',
+        name: 'Short Description',
+        dataKey: 'shortDescription',
         isSortable: true,
       },
       {
-        name: 'Permission',
-        dataKey: 'permission',
+        name: 'Ticket Number',
+        dataKey: 'ticketNumber',
         isSortable: true,
       },
       {
-        name: 'Report To',
-        dataKey: 'reportTo',
+        name: 'Ticket Link',
+        dataKey: 'ticketLink',
+        isSortable: true,
+      },
+      {
+        name: 'Reporter Name',
+        dataKey: 'reporterName',
+        isSortable: true,
+      },
+      {
+        name: 'Design Link',
+        dataKey: 'designLink',
         isSortable: true,
       }
     ];
