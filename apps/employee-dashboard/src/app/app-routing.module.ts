@@ -16,6 +16,10 @@ const routes: Routes = [
     loadChildren: () => import('@razroo-fully-architected-dashboard/repo-data').then(m => m.RepoDataModule)
   },
   {
+    path: 'tickets',
+    loadChildren: () => import('@razroo-fully-architected-dashboard/tickets').then(m => m.TicketsModule)
+  },
+  {
     path: '**',
     redirectTo: ''
   },
