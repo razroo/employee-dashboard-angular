@@ -1,16 +1,23 @@
 import { Component, OnInit } from '@angular/core';
+import { TableColumn } from '@razroo-fully-architected-dashboard/ui/common';
 
 const ELEMENT_DATA = [
-  {position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H'},
-  {position: 2, name: 'Helium', weight: 4.0026, symbol: 'He'},
-  {position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li'},
-  {position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be'},
-  {position: 5, name: 'Boron', weight: 10.811, symbol: 'B'},
-  {position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C'},
-  {position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N'},
-  {position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O'},
-  {position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F'},
-  {position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne'},
+  {name: 'test', position: 'test position', location: 'New York',
+    permission: 'test permission', reportTo: 'no one'},
+  {name: 'test', position: 'test position', location: 'Los Angelos',
+    permission: 'test permission', reportTo: 'no one'},
+  {name: 'test', position: 'test position', location: 'Alabama',
+    permission: 'test permission', reportTo: 'no one'},
+  {name: 'test', position: 'test position', location: 'new york',
+    permission: 'test permission', reportTo: 'no one'},
+  {name: 'test', position: 'test position', location: 'new york',
+    permission: 'test permission', reportTo: 'no one'},
+  {name: 'test', position: 'test position', location: 'new york',
+    permission: 'test permission', reportTo: 'no one'},
+  {name: 'test', position: 'test position', location: 'new york',
+    permission: 'test permission', reportTo: 'no one'},
+  {name: 'test', position: 'test position', location: 'new york',
+    permission: 'test permission', reportTo: 'no one'},
 ];
 
 @Component({
@@ -20,11 +27,35 @@ const ELEMENT_DATA = [
 })
 export class EmployeesComponent implements OnInit {
   elementData;
+  employeeTableColumns: TableColumn[];
 
   constructor() { }
 
   ngOnInit(): void {
     this.elementData = ELEMENT_DATA;
+
+    this.employeeTableColumns = [
+      {
+        name: 'Name',
+        dataKey: 'name'
+      },
+      {
+        name: 'Position',
+        dataKey: 'position'
+      },
+      {
+        name: 'Location',
+        dataKey: 'location'
+      },
+      {
+        name: 'Permission',
+        dataKey: 'permission'
+      },
+      {
+        name: 'Report To',
+        dataKey: 'reportTo'
+      }
+    ];
   }
 
 }
