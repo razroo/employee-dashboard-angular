@@ -223,6 +223,32 @@
           "style": "scss"
         }
       }
+    },
+    "tickets": {
+      "projectType": "library",
+      "root": "libs/tickets",
+      "sourceRoot": "libs/tickets/src",
+      "prefix": "razroo-fully-architected-dashboard",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/tickets/src/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/tickets/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      }
     }
   },
   "cli": {

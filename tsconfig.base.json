@@ -25,6 +25,9 @@
       ],
       "@razroo-fully-architected-dashboard/repo-data": [
         "libs/repo-data/src/index.ts"
+      ],
+      "@razroo-fully-architected-dashboard/tickets": [
+        "libs/tickets/src/index.ts"
       ]
     }
   },
