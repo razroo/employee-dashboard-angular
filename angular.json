@@ -353,6 +353,32 @@
           "style": "scss"
         }
       }
+    },
+    "data-graphql": {
+      "projectType": "library",
+      "root": "libs/data-graphql",
+      "sourceRoot": "libs/data-graphql/src",
+      "prefix": "razroo-fully-architected-dashboard",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/data-graphql/src/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/data-graphql/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      }
     }
   },
   "cli": {

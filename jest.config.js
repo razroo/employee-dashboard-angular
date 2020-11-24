@@ -10,5 +10,6 @@ module.exports = {
     '<rootDir>/libs/data-models',
     '<rootDir>/libs/data-access',
     '<rootDir>/libs/data-services',
+    '<rootDir>/libs/data-graphql',
   ],
 };
