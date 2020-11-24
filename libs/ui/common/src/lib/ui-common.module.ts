@@ -9,10 +9,12 @@ import {MatTableModule} from '@angular/material/table';
 import { DataPropertyGetterPipe } from './data-table/data-property-getter.pipe';
 import { MatSortModule } from '@angular/material/sort';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 @NgModule({
   imports: [CommonModule, MatSidenavModule, MatToolbarModule, RouterModule,
-    MatTableModule, MatSortModule, MatPaginatorModule],
+    MatTableModule, MatSortModule, MatPaginatorModule, MatInputModule, MatFormFieldModule],
   declarations: [LayoutComponent, DataTableComponent, DataPropertyGetterPipe],
   exports: [LayoutComponent, DataTableComponent],
 })
