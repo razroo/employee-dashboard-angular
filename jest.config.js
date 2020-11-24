@@ -8,5 +8,6 @@ module.exports = {
     '<rootDir>/libs/tickets',
     '<rootDir>/libs/analytics',
     '<rootDir>/libs/data-models',
+    '<rootDir>/libs/data-access',
   ],
 };
