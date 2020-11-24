@@ -3,5 +3,8 @@
 <razroo-fully-architected-dashboard-data-table [tableData]="elementData"
                                                [tableColumns]="ticketsTableColumns"
                                                isSortable="true"
-                                               isFilterable="true">
+                                               isFilterable="true"
+                                               isPageable="true"
+                                               [paginationSizes]="[5,10,15]"
+                                               [defaultPageSize]="10">
 </razroo-fully-architected-dashboard-data-table>
