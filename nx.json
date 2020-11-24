@@ -47,6 +47,9 @@
     },
     "analytics": {
       "tags": []
+    },
+    "data-models": {
+      "tags": []
     }
   }
 }

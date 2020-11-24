@@ -275,6 +275,32 @@
           "style": "scss"
         }
       }
+    },
+    "data-models": {
+      "projectType": "library",
+      "root": "libs/data-models",
+      "sourceRoot": "libs/data-models/src",
+      "prefix": "razroo-fully-architected-dashboard",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/data-models/src/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/data-models/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      }
     }
   },
   "cli": {

@@ -31,6 +31,9 @@
       ],
       "@razroo-fully-architected-dashboard/analytics": [
         "libs/analytics/src/index.ts"
+      ],
+      "@razroo-fully-architected-dashboard/data-models": [
+        "libs/data-models/src/index.ts"
       ]
     }
   },

@@ -7,5 +7,6 @@ module.exports = {
     '<rootDir>/libs/repo-data',
     '<rootDir>/libs/tickets',
     '<rootDir>/libs/analytics',
+    '<rootDir>/libs/data-models',
   ],
 };
