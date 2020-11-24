@@ -9,5 +9,6 @@ module.exports = {
     '<rootDir>/libs/analytics',
     '<rootDir>/libs/data-models',
     '<rootDir>/libs/data-access',
+    '<rootDir>/libs/data-services',
   ],
 };

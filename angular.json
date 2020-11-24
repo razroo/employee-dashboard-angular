@@ -327,6 +327,32 @@
           "style": "scss"
         }
       }
+    },
+    "data-services": {
+      "projectType": "library",
+      "root": "libs/data-services",
+      "sourceRoot": "libs/data-services/src",
+      "prefix": "razroo-fully-architected-dashboard",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/data-services/src/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/data-services/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      }
     }
   },
   "cli": {
