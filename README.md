@@ -39,3 +39,19 @@ is all that is required.
 
 # Figma Community Designs 
 Figma Community designs can be [seen here](https://www.figma.com/@razroo). 
+
+| Figma File Name               	| URL                                                     	|
+|-------------------------------	|---------------------------------------------------------	|
+| Book Reader Page              	| https://www.figma.com/community/file/981223818215963917 	|
+| Book Reader Nav               	| https://www.figma.com/community/file/981224090776824078 	|
+| Book Reader Expanded          	| https://www.figma.com/community/file/981224247896537359 	|
+| Mobile - WIP                  	| https://www.figma.com/community/file/981225778538921234 	|
+| Analytics                     	| https://www.figma.com/community/file/981203878678210809 	|
+| Employees Page                	| https://www.figma.com/community/file/981205532860470525 	|
+| Employees Page Mobile - WIP   	| https://www.figma.com/community/file/981204700847588604 	|
+| Employees Nav Expanded        	| https://www.figma.com/community/file/981204539917042939 	|
+| Tickets Page                  	| https://www.figma.com/community/file/981206580619080959 	|
+| Tickets Nav Expanded          	| https://www.figma.com/community/file/981207124880855296 	|
+| Github Repo Nav Expanded      	| https://www.figma.com/community/file/981222492650063115 	|
+| Github Repo Page              	| https://www.figma.com/community/file/981214424706052358 	|
+| Github Repo Page --> Expanded 	| https://www.figma.com/community/file/981213279540086020 	|
