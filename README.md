@@ -38,7 +38,7 @@ is all that is required.
 # Technologies Included 
 
 # Figma Community Designs 
-Figma Community designs can be [seen here](https://www.figma.com/@razroo). 
+Figma Community designs can be [seen here](https://www.figma.com/@razroo). For your convenience, they have placed here, in the following table:
 
 | Figma File Name               	| URL                                                     	|
 |-------------------------------	|---------------------------------------------------------	|
