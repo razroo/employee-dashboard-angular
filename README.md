@@ -10,6 +10,31 @@
 
 The end all be all open-source repository for anyone looking to develop Angular. 
 
+## Initialize local environment
+
+(Make sure have [npm](https://www.npmjs.com/get-npm) installed) 
+
+Install NPM packages
+```sh
+$ npm install
+```
+   
+## Run web app locally
+
+```sh
+$ npm start
+```
+
+Then go to `http://localhost:4200/`.
+
+## Building Frontend ##
+Angular offers an out of box solution for building Angular. 
+To build frontend into a dist folder, running: 
+```
+npm run build
+``` 
+is all that is required. 
+
 # Technologies Included 
 
 # 
