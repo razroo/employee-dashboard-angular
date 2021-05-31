@@ -42,7 +42,6 @@
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
-              "extractCss": true,
               "namedChunks": false,
               "extractLicenses": true,
               "vendorChunk": false,
@@ -60,7 +59,10 @@
                 }
               ]
             }
-          }
+          },
+          "outputs": [
+            "{options.outputPath}"
+          ]
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
@@ -82,7 +84,10 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["apps/employee-dashboard/src/**/*.ts"]
+            "lintFilePatterns": [
+              "apps/employee-dashboard/src/**/*.ts",
+              "apps/employee-dashboard/src/**/*.html"
+            ]
           }
         },
         "test": {
@@ -90,7 +95,10 @@
           "options": {
             "jestConfig": "apps/employee-dashboard/jest.config.js",
             "passWithNoTests": true
-          }
+          },
+          "outputs": [
+            "coverage/apps/employee-dashboard"
+          ]
         }
       }
     },
@@ -115,7 +123,9 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["apps/employee-dashboard-e2e/**/*.{js,ts}"]
+            "lintFilePatterns": [
+              "apps/employee-dashboard-e2e/**/*.{js,ts}"
+            ]
           }
         }
       }
@@ -129,7 +139,10 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["libs/employees/src/**/*.ts"]
+            "lintFilePatterns": [
+              "libs/employees/src/**/*.ts",
+              "libs/employees/src/**/*.html"
+            ]
           }
         },
         "test": {
@@ -137,7 +150,10 @@
           "options": {
             "jestConfig": "libs/employees/jest.config.js",
             "passWithNoTests": true
-          }
+          },
+          "outputs": [
+            "coverage/libs/employees"
+          ]
         }
       },
       "schematics": {
@@ -155,7 +171,10 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["libs/ui/src/**/*.ts"]
+            "lintFilePatterns": [
+              "libs/ui/src/**/*.ts",
+              "libs/ui/src/**/*.html"
+            ]
           }
         },
         "test": {
@@ -163,7 +182,10 @@
           "options": {
             "jestConfig": "libs/ui/jest.config.js",
             "passWithNoTests": true
-          }
+          },
+          "outputs": [
+            "coverage/libs/ui"
+          ]
         }
       },
       "schematics": {
@@ -181,7 +203,10 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["libs/ui/common/src/**/*.ts"]
+            "lintFilePatterns": [
+              "libs/ui/common/src/**/*.ts",
+              "libs/ui/common/src/**/*.html"
+            ]
           }
         },
         "test": {
@@ -189,7 +214,10 @@
           "options": {
             "jestConfig": "libs/ui/common/jest.config.js",
             "passWithNoTests": true
-          }
+          },
+          "outputs": [
+            "coverage/libs/ui/common"
+          ]
         }
       },
       "schematics": {
@@ -207,7 +235,10 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["libs/repo-data/src/**/*.ts"]
+            "lintFilePatterns": [
+              "libs/repo-data/src/**/*.ts",
+              "libs/repo-data/src/**/*.html"
+            ]
           }
         },
         "test": {
@@ -215,7 +246,10 @@
           "options": {
             "jestConfig": "libs/repo-data/jest.config.js",
             "passWithNoTests": true
-          }
+          },
+          "outputs": [
+            "coverage/libs/repo-data"
+          ]
         }
       },
       "schematics": {
@@ -233,7 +267,10 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["libs/tickets/src/**/*.ts"]
+            "lintFilePatterns": [
+              "libs/tickets/src/**/*.ts",
+              "libs/tickets/src/**/*.html"
+            ]
           }
         },
         "test": {
@@ -241,7 +278,10 @@
           "options": {
             "jestConfig": "libs/tickets/jest.config.js",
             "passWithNoTests": true
-          }
+          },
+          "outputs": [
+            "coverage/libs/tickets"
+          ]
         }
       },
       "schematics": {
@@ -259,7 +299,10 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["libs/analytics/src/**/*.ts"]
+            "lintFilePatterns": [
+              "libs/analytics/src/**/*.ts",
+              "libs/analytics/src/**/*.html"
+            ]
           }
         },
         "test": {
@@ -267,7 +310,10 @@
           "options": {
             "jestConfig": "libs/analytics/jest.config.js",
             "passWithNoTests": true
-          }
+          },
+          "outputs": [
+            "coverage/libs/analytics"
+          ]
         }
       },
       "schematics": {
@@ -285,7 +331,10 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["libs/data-models/src/**/*.ts"]
+            "lintFilePatterns": [
+              "libs/data-models/src/**/*.ts",
+              "libs/data-models/src/**/*.html"
+            ]
           }
         },
         "test": {
@@ -293,7 +342,10 @@
           "options": {
             "jestConfig": "libs/data-models/jest.config.js",
             "passWithNoTests": true
-          }
+          },
+          "outputs": [
+            "coverage/libs/data-models"
+          ]
         }
       },
       "schematics": {
@@ -311,7 +363,10 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["libs/data-access/src/**/*.ts"]
+            "lintFilePatterns": [
+              "libs/data-access/src/**/*.ts",
+              "libs/data-access/src/**/*.html"
+            ]
           }
         },
         "test": {
@@ -319,7 +374,10 @@
           "options": {
             "jestConfig": "libs/data-access/jest.config.js",
             "passWithNoTests": true
-          }
+          },
+          "outputs": [
+            "coverage/libs/data-access"
+          ]
         }
       },
       "schematics": {
@@ -337,7 +395,10 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["libs/data-services/src/**/*.ts"]
+            "lintFilePatterns": [
+              "libs/data-services/src/**/*.ts",
+              "libs/data-services/src/**/*.html"
+            ]
           }
         },
         "test": {
@@ -345,7 +406,10 @@
           "options": {
             "jestConfig": "libs/data-services/jest.config.js",
             "passWithNoTests": true
-          }
+          },
+          "outputs": [
+            "coverage/libs/data-services"
+          ]
         }
       },
       "schematics": {
@@ -363,7 +427,10 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["libs/data-graphql/src/**/*.ts"]
+            "lintFilePatterns": [
+              "libs/data-graphql/src/**/*.ts",
+              "libs/data-graphql/src/**/*.html"
+            ]
           }
         },
         "test": {
@@ -371,7 +438,10 @@
           "options": {
             "jestConfig": "libs/data-graphql/jest.config.js",
             "passWithNoTests": true
-          }
+          },
+          "outputs": [
+            "coverage/libs/data-graphql"
+          ]
         }
       },
       "schematics": {
