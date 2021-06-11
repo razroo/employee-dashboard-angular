@@ -1,4 +1,17 @@
+
+
+
 .mat-drawer-container {
-  $toolbar-height: 64px;
+  $toolbar-height: 100px;
   height: calc(100% - #{$toolbar-height});
+}
+
+.toolbar{
+  display:flex;
+  justify-content: space-between;
+}
+
+.logos{
+ cursor:pointer;
+  color:grey;
 }
