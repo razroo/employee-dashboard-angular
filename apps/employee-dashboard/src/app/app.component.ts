@@ -16,6 +16,9 @@ import { faChartLine } from '@fortawesome/free-solid-svg-icons';
 
 export class AppComponent {
   title = 'Razroo | Fully Architected Employee Dashboard';
+
+
+
  faBell = faBell;
  faQuestionCircle = faQuestionCircle; 
  faUserCircle = faUserCircle
@@ -24,4 +27,8 @@ export class AppComponent {
  faChartPie = faChartPie;
  faClipboardList = faClipboardList;
  faChartLine = faChartLine;
+
+ showFiller = false;
+
+ 
 }

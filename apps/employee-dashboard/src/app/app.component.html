@@ -27,16 +27,16 @@
 
 <mat-sidenav-container>
 
-  <mat-sidenav #snav mode="side" opened>
+  <mat-sidenav  #snav mode="side" opened>
     <button
     mat-icon-button
     class="example-icon"
     aria-label="Nav Menu Button"
-    (click)="snav.toggle()"
+    (click)="showFiller = !showFiller" 
   >
     <mat-icon>menu</mat-icon>
   </button>
-    <mat-nav-list>
+    <mat-nav-list *ngIf="showFiller" >
       <a mat-list-item routerLink="employees">  <fa-icon
         [icon]="faUserFriends"
         aria-hidden="false"
