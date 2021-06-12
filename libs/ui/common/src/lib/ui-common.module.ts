@@ -11,11 +11,15 @@ import { MatSortModule } from '@angular/material/sort';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
-
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
 @NgModule({
   imports: [CommonModule, MatSidenavModule, MatToolbarModule, RouterModule,
     MatTableModule, MatSortModule, MatPaginatorModule, MatInputModule, MatFormFieldModule],
   declarations: [LayoutComponent, DataTableComponent, DataPropertyGetterPipe],
   exports: [LayoutComponent, DataTableComponent],
 })
-export class UiCommonModule {}
+export class UiCommonModule {
+
+
+  faSearch = faSearch;
+}

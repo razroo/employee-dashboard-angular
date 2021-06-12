@@ -3,8 +3,8 @@
   <!-- Filter -->
   <ng-container *ngIf="isFilterable" [matColumnDef]="this.rowActionIcon">
     <mat-form-field>
-      <mat-label>Filter</mat-label>
-      <input matInput (keyup)="applyFilter($event)" placeholder="filter">
+      <mat-label>Search</mat-label>
+      <input matInput (keyup)="applyFilter($event)" placeholder="Search">
     </mat-form-field>
   </ng-container>
 
