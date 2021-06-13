@@ -1,18 +1,62 @@
 <header>
-  <mat-toolbar>
-    <button mat-icon-button class="example-icon" aria-label="Nav Menu Button" (click)="snav.toggle()">
-      <mat-icon>menu</mat-icon>
-    </button>
+  <mat-toolbar class="toolbar">
+
+
+    <a>Logo</a> 
+    <div class="logos">
+      <fa-icon
+        [icon]="faBell"
+        aria-hidden="false"
+        aria-label="Notification Icon"
+      ></fa-icon>
+
+      <fa-icon
+        [icon]="faQuestionCircle"
+        aria-hidden="false"
+        aria-label="Question Icon"
+      ></fa-icon>
+
+      <fa-icon
+        [icon]="faUserCircle"
+        aria-hidden="false"
+        aria-label="Account Icon"
+      ></fa-icon>
+    </div>
   </mat-toolbar>
 </header>
 
 <mat-sidenav-container>
-  <mat-sidenav #snav mode="push">
-    <mat-nav-list>
-      <a mat-list-item routerLink="employees">Employees</a>
-      <a mat-list-item routerLink="repo-data">Repo Data</a>
-      <a mat-list-item routerLink="tickets">Ticket Data</a>
-      <a mat-list-item routerLink="analytics" >Employee Analytics</a>
+
+  <mat-sidenav  #snav mode="side" opened>
+    <button
+    mat-icon-button
+    class="example-icon"
+    aria-label="Nav Menu Button"
+    (click)="showFiller = !showFiller" 
+  >
+    <mat-icon>menu</mat-icon>
+  </button>
+    <mat-nav-list *ngIf="showFiller" >
+      <a mat-list-item routerLink="employees">  <fa-icon
+        [icon]="faUserFriends"
+        aria-hidden="false"
+        aria-label="Notification Icon"
+      ></fa-icon> Employees</a>
+      <a mat-list-item routerLink="repo-data">  <fa-icon
+        [icon]="faChartLine"
+        aria-hidden="false"
+        aria-label="Notification Icon"
+      ></fa-icon>Repo Data</a>
+      <a mat-list-item routerLink="tickets">     <fa-icon
+        [icon]="faClipboardList"
+        aria-hidden="false"
+        aria-label="Account Icon"
+      ></fa-icon>Ticket Data</a>
+      <a mat-list-item routerLink="analytics">      <fa-icon
+        [icon]="faChartPie"
+        aria-hidden="false"
+        aria-label="Account Icon"
+      ></fa-icon>Employee Analytics</a>
     </mat-nav-list>
   </mat-sidenav>
 
