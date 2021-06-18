@@ -4,24 +4,24 @@
 .mat-drawer-container { 
   $toolbar-height: 100px;
   height: calc(100% - #{$toolbar-height});
+
 }
 
 .toolbar{
   display:flex; 
   justify-content: space-between;
+  padding-left:22px;
+  padding-right:22px;
 }
 
 .logos{
 
   color:grey;
-  padding-right:22px;
+
 }
 
 fa-icon{
   padding:10px;
   cursor:pointer;
 
-}
-a{
-  padding-left:22px;
 }
