@@ -1,10 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 //import { Subscription } from 'rxjs';
 import { TableColumn } from '@razroo-fully-architected-dashboard/ui/common';
-// eslint-disable-next-line @nrwl/nx/enforce-module-boundaries
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-import {  AllEmployeesService } from '@razroo-fully-architected-dashboard/data-services';
-
 
 @Component({
   selector: 'razroo-fully-architected-dashboard-employees',
@@ -16,10 +12,7 @@ import {  AllEmployeesService } from '@razroo-fully-architected-dashboard/data-s
 export class EmployeesComponent implements OnInit {
 
 
-  getEmployees(): void {
-    return this.getEmployees()
-  }
-  constructor(private AllEmployeesService: AllEmployeesService) {}
+
 
  
   // eslint-disable-next-line @typescript-eslint/member-ordering
