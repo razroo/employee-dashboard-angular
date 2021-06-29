@@ -10,12 +10,9 @@ import { TableColumn } from '@razroo-fully-architected-dashboard/ui/common';
 })
 
 export class EmployeesComponent implements OnInit {
+  
 
 
-
-
- 
-  // eslint-disable-next-line @typescript-eslint/member-ordering
   employeeTableColumns: TableColumn[];
 
   ngOnInit(): void {

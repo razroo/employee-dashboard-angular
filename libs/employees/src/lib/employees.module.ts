@@ -10,7 +10,7 @@ import { UiCommonModule } from '@razroo-fully-architected-dashboard/ui/common';
 @NgModule({
   imports: [CommonModule, UiCommonModule, EmployeesRoutingModule],
   declarations: [EmployeesComponent],
- 
+
   exports: [EmployeesComponent],
 })
 export class EmployeesModule {}
