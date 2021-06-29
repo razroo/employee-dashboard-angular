@@ -2,7 +2,7 @@ import gql from 'graphql-tag';
 
 
 
-export const GetAllEmployees = gql`
+export const EmployeeQuery = gql`
 query getEmployees{
     employees {
   
