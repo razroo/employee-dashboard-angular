@@ -1,38 +1,29 @@
 import { Component, OnInit } from '@angular/core';
 import { TableColumn } from '@razroo-fully-architected-dashboard/ui/common';
+import {EmployeesService } from '@razroo-fully-architected-dashboard/data-services'
 
-const ELEMENT_DATA = [
-  {name: 'test', position: 'test position', location: 'New York',
-    permission: 'test permission', reportTo: 'no one'},
-  {name: 'test', position: 'test position', location: 'Los Angelos',
-    permission: 'test permission', reportTo: 'no one'},
-  {name: 'test', position: 'test position', location: 'Alabama',
-    permission: 'test permission', reportTo: 'no one'},
-  {name: 'test', position: 'test position', location: 'new york',
-    permission: 'test permission', reportTo: 'no one'},
-  {name: 'test', position: 'test position', location: 'new york',
-    permission: 'test permission', reportTo: 'no one'},
-  {name: 'test', position: 'test position', location: 'new york',
-    permission: 'test permission', reportTo: 'no one'},
-  {name: 'test', position: 'test position', location: 'new york',
-    permission: 'test permission', reportTo: 'no one'},
-  {name: 'test', position: 'test position', location: 'new york',
-    permission: 'test permission', reportTo: 'no one'},
-];
-
+import { Observable } from 'rxjs'
 @Component({
   selector: 'razroo-fully-architected-dashboard-employees',
   templateUrl: './employees.component.html',
-  styleUrls: ['./employees.component.scss']
+  styleUrls: ['./employees.component.scss'],
+ 
 })
+
 export class EmployeesComponent implements OnInit {
-  elementData;
+  
+  constructor(private employeesService: EmployeesService){} 
+
   employeeTableColumns: TableColumn[];
 
-  constructor() { }
-
   ngOnInit(): void {
-    this.elementData = ELEMENT_DATA;
+
+    this.employeesService.subscribe(data => {
+      console.log('data');
+      console.log(data);
+    });
+
+   
 
     this.employeeTableColumns = [
       {
