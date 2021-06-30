@@ -9,6 +9,7 @@ import {EmployeeQuery} from '@razroo-fully-architected-dashboard/data-graphql';
   providedIn: 'root'
 })
 export class EmployeesService {
+
   constructor(private apollo: Apollo) { }
   getEmployees(): Observable<EmployeesService> {
     const query = EmployeeQuery;

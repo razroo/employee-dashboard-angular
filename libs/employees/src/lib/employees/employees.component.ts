@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-//import { Subscription } from 'rxjs';
 import { TableColumn } from '@razroo-fully-architected-dashboard/ui/common';
+import {EmployeesService } from '@razroo-fully-architected-dashboard/data-services'
 
+import { Observable } from 'rxjs'
 @Component({
   selector: 'razroo-fully-architected-dashboard-employees',
   templateUrl: './employees.component.html',
@@ -11,12 +12,16 @@ import { TableColumn } from '@razroo-fully-architected-dashboard/ui/common';
 
 export class EmployeesComponent implements OnInit {
   
-
+  constructor(private employeesService: EmployeesService){} 
 
   employeeTableColumns: TableColumn[];
 
   ngOnInit(): void {
 
+    this.employeesService.subscribe(data => {
+      console.log('data');
+      console.log(data);
+    });
 
    
 
