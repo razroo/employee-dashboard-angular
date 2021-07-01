@@ -14,10 +14,10 @@ export class EmployeesService {
 // rethink how this is structured. this is where I need to work 
   getEmployees(): Observable<EmployeesService> {
     
-    const query = EmployeeQuery;
+    const query = EmployeeQuery
     console.log('testing', query)
     const allEmployees = this.apollo.query({query})
-    return from(allEmployees).pipe(pluck('data', 'employees')); 
+    return from(allEmployees).pipe(pluck('data', 'employees'))
   }
   
 }
