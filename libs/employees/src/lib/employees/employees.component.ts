@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { TableColumn } from '@razroo-fully-architected-dashboard/ui/common';
 import {EmployeesService } from '@razroo-fully-architected-dashboard/data-services'
-import {   Observable } from 'rxjs'
-import { Hero } from './hero';
+
+
 
 @Component({
   selector: 'razroo-fully-architected-dashboard-employees',
@@ -13,15 +13,20 @@ import { Hero } from './hero';
 
 export class EmployeesComponent implements OnInit {
 
-  constructor(private employeesService: EmployeesService){} 
+  constructor(
+    private employeesService: EmployeesService
+    ){} 
+  
+ 
 
   employeeTableColumns: TableColumn[];
 
   ngOnInit(): void {
 
-    this.employeesService.subscribe(data => {
+
+      this.employeesService.subscribe(employees => {
       console.log('data');
-      console.log(data);
+      console.log(employees);
     });
 
    
@@ -53,6 +58,8 @@ export class EmployeesComponent implements OnInit {
         isSortable: true,
       }
     ];
+
+  
   }
 
 }
