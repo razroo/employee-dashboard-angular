@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { TableColumn } from '@razroo-fully-architected-dashboard/ui/common';
 import {EmployeesService } from '@razroo-fully-architected-dashboard/data-services'
+import {   Observable } from 'rxjs'
+import { Hero } from './hero';
 
-import { Observable } from 'rxjs'
 @Component({
   selector: 'razroo-fully-architected-dashboard-employees',
   templateUrl: './employees.component.html',
@@ -11,7 +12,7 @@ import { Observable } from 'rxjs'
 })
 
 export class EmployeesComponent implements OnInit {
-  
+
   constructor(private employeesService: EmployeesService){} 
 
   employeeTableColumns: TableColumn[];
