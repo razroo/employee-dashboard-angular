@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TableColumn } from '@razroo-fully-architected-dashboard/ui/common';
-import {EmployeesService } from '@razroo-fully-architected-dashboard/data-services'
+import {allEmployees, EmployeesService } from '@razroo-fully-architected-dashboard/data-services'
 
 
 
@@ -17,7 +17,7 @@ export class EmployeesComponent implements OnInit {
     private employeesService: EmployeesService
     ){} 
   
- 
+ allEmployees: allEmployees[] = [];
 
   employeeTableColumns: TableColumn[];
 
@@ -25,8 +25,13 @@ export class EmployeesComponent implements OnInit {
 
 
       this.employeesService.getEmployees().subscribe(allEmployees => {
-      console.log('data');
-      console.log(allEmployees);
+     
+      console.log( 'all-employees:',allEmployees);
+      return allEmployees;
+      
+      //TODO  add the allEmployees object to the js object and attach that to the data table
+         
+     
     });
 
    
