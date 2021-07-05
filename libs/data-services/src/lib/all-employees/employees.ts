@@ -1,4 +1,4 @@
-export interface allEmployees {
+export interface Employee {
     name: string;
     position : string; 
     location : string;

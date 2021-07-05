@@ -1,40 +1,33 @@
 import { Component, OnInit } from '@angular/core';
 import { TableColumn } from '@razroo-fully-architected-dashboard/ui/common';
-import {allEmployees, EmployeesService } from '@razroo-fully-architected-dashboard/data-services'
-
-
+import { EmployeesService } from '@razroo-fully-architected-dashboard/data-services'
 
 @Component({
   selector: 'razroo-fully-architected-dashboard-employees',
   templateUrl: './employees.component.html',
   styleUrls: ['./employees.component.scss'],
- 
+
 })
+
 
 export class EmployeesComponent implements OnInit {
 
-  constructor(
-    private employeesService: EmployeesService
-    ){} 
+
+  employees$ = this.employeesService.getEmployees();
   
- allEmployees: allEmployees[] = [];
+
+  constructor(
+    public employeesService: EmployeesService
+  ) {}
+
 
   employeeTableColumns: TableColumn[];
-
   ngOnInit(): void {
+    
+    this.employees$.subscribe(employees$ => {
 
-
-      this.employeesService.getEmployees().subscribe(allEmployees => {
-     
-      console.log( 'all-employees:',allEmployees);
-      return allEmployees;
-      
-      //TODO  add the allEmployees object to the js object and attach that to the data table
-         
-     
-    });
-
-   
+      console.log(employees$);
+    })
 
     this.employeeTableColumns = [
       {
@@ -63,8 +56,5 @@ export class EmployeesComponent implements OnInit {
         isSortable: true,
       }
     ];
-
-  
   }
-
 }
