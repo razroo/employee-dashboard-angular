@@ -53,7 +53,7 @@ export class DataTableComponent implements OnInit, AfterViewInit {
     this.tableDataSource = new MatTableDataSource<any>(data);
     this.tableDataSource.paginator = this.matPaginator;
     this.tableDataSource.sort = this.matSort;
-    console.log("data:", data);
+  
   }
 
   applyFilter(event: Event) {

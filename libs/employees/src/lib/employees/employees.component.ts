@@ -26,7 +26,7 @@ export class EmployeesComponent implements OnInit {
   ngOnInit(): void {
     
     this.employees$.subscribe(employees => {
-      console.log(employees, 'Employees ');
+return employees
     })
 
 

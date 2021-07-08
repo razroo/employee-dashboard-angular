@@ -15,11 +15,8 @@ export class EmployeesService {
   
   getEmployees(): Observable<EmployeesService> {
     const query = EmployeeQuery
-    console.log(EmployeeQuery)
     const allEmployees = this.apollo.query({ query })
-      console.log(allEmployees, 'employee data')
     return from(allEmployees).pipe(pluck('data', 'employees')
-
     )
 }
 

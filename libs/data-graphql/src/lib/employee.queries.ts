@@ -6,8 +6,7 @@ export const EmployeeQuery = gql`
 query getEmployees{
     employees {
   
-    Name
-  
+      Name
       Position
       Location
       Permission
