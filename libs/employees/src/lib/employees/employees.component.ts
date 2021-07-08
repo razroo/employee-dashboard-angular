@@ -7,14 +7,12 @@ import { EmployeesService } from '@razroo-fully-architected-dashboard/data-servi
   templateUrl: './employees.component.html',
   styleUrls: ['./employees.component.scss'],
 
-})
+}) 
 
 
 export class EmployeesComponent implements OnInit {
 
-
   employees$ = this.employeesService.getEmployees();
-  
 
   constructor(
     public employeesService: EmployeesService
@@ -22,37 +20,40 @@ export class EmployeesComponent implements OnInit {
 
 
   employeeTableColumns: TableColumn[];
+
+   hhello 
+   
   ngOnInit(): void {
     
-    this.employees$.subscribe(employees$ => {
-
-      console.log(employees$);
+    this.employees$.subscribe(employees => {
+      console.log(employees, 'Employees ');
     })
+
 
     this.employeeTableColumns = [
       {
         name: 'Name',
-        dataKey: 'name',
+        dataKey: 'Name',
         isSortable: true,
       },
       {
         name: 'Position',
-        dataKey: 'position',
+        dataKey: 'Position',
         isSortable: true,
       },
       {
         name: 'Location',
-        dataKey: 'location',
+        dataKey: 'Location',
         isSortable: true,
       },
       {
         name: 'Permission',
-        dataKey: 'permission',
+        dataKey: 'Permission',
         isSortable: true,
       },
       {
         name: 'Report To',
-        dataKey: 'reportTo',
+        dataKey: 'ReportTo',
         isSortable: true,
       }
     ];
