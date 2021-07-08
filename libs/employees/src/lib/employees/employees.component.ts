@@ -1,57 +1,61 @@
 import { Component, OnInit } from '@angular/core';
 import { TableColumn } from '@razroo-fully-architected-dashboard/ui/common';
-import {EmployeesService } from '@razroo-fully-architected-dashboard/data-services'
+import { EmployeesService } from '@razroo-fully-architected-dashboard/data-services'
 
-import { Observable } from 'rxjs'
 @Component({
   selector: 'razroo-fully-architected-dashboard-employees',
   templateUrl: './employees.component.html',
   styleUrls: ['./employees.component.scss'],
- 
-})
+
+}) 
+
 
 export class EmployeesComponent implements OnInit {
-  
-  constructor(private employeesService: EmployeesService){} 
+
+  employees$ = this.employeesService.getEmployees();
+
+  constructor(
+    public employeesService: EmployeesService
+  ) {}
+
 
   employeeTableColumns: TableColumn[];
 
+  
+
   ngOnInit(): void {
+    
+    this.employees$.subscribe(employees => {
+return employees
+    })
 
-    this.employeesService.subscribe(data => {
-      console.log('data');
-      console.log(data);
-    });
-
-   
 
     this.employeeTableColumns = [
       {
         name: 'Name',
-        dataKey: 'name',
+        dataKey: 'Name',
         isSortable: true,
       },
       {
         name: 'Position',
-        dataKey: 'position',
+        dataKey: 'Position',
         isSortable: true,
       },
       {
         name: 'Location',
-        dataKey: 'location',
+        dataKey: 'Location',
         isSortable: true,
       },
       {
         name: 'Permission',
-        dataKey: 'permission',
+        dataKey: 'Permission',
         isSortable: true,
       },
       {
         name: 'Report To',
-        dataKey: 'reportTo',
+        dataKey: 'ReportTo',
         isSortable: true,
       }
     ];
   }
-
 }

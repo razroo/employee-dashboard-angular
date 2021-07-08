@@ -1,8 +1,8 @@
 import {AfterViewInit, Component, EventEmitter, Input, OnInit, Output, ViewChild} from '@angular/core';
 import { TableColumn } from './table-column.interface';
-import {MatSort, Sort} from "@angular/material/sort";
-import {MatTableDataSource} from "@angular/material/table";
-import {MatPaginator} from "@angular/material/paginator";
+import {MatSort, Sort} from '@angular/material/sort';
+import {MatTableDataSource} from '@angular/material/table';
+import {MatPaginator} from '@angular/material/paginator';
 
 @Component({
   selector: 'razroo-fully-architected-dashboard-data-table',
@@ -53,6 +53,7 @@ export class DataTableComponent implements OnInit, AfterViewInit {
     this.tableDataSource = new MatTableDataSource<any>(data);
     this.tableDataSource.paginator = this.matPaginator;
     this.tableDataSource.sort = this.matSort;
+  
   }
 
   applyFilter(event: Event) {
