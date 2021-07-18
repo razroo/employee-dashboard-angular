@@ -49,6 +49,7 @@
   <mat-paginator *ngIf="isPageable"
                  [pageSizeOptions]="paginationSizes"
                  [pageSize]="defaultPageSize"
+                 (page)="paginateTable($event)"
                  showFirstLastButtons>
   </mat-paginator>
 </ng-container>

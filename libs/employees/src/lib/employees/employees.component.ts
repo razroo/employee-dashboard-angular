@@ -58,4 +58,10 @@ return employees
       }
     ];
   }
+
+  paginateTable($event: any): void {
+    console.log('$event');
+    console.log($event);
+
+  }
 }

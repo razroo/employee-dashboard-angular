@@ -25,6 +25,7 @@ export class DataTableComponent implements OnInit, AfterViewInit {
 
   @Output() sort: EventEmitter<Sort> = new EventEmitter();
   @Output() rowAction: EventEmitter<any> = new EventEmitter<any>();
+  @Output() page: EventEmitter<Sort> = new EventEmitter();
 
   // this property needs to have a setter, to dynamically get changes from parent component
   @Input() set tableData(data: any[]) {
@@ -69,6 +70,10 @@ export class DataTableComponent implements OnInit, AfterViewInit {
 
   emitRowAction(row: any) {
     this.rowAction.emit(row);
+  }
+
+  paginateTable($event: any): void {
+    this.page.emit($event);
   }
 
 }
