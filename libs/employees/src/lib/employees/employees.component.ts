@@ -21,12 +21,14 @@ export class EmployeesComponent implements OnInit {
 
   employeeTableColumns: TableColumn[];
 
-  
+
 
   ngOnInit(): void {
     
     this.employees$.subscribe(employees => {
+console.log(employees);
 return employees
+
     })
 
 
@@ -59,9 +61,9 @@ return employees
     ];
   }
 
+
   paginateTable($event: any): void {
-    console.log('$event');
-    console.log($event);
+    console.log('$event:', $event);
 
   }
 }

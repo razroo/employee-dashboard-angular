@@ -71,7 +71,8 @@ export class DataTableComponent implements OnInit, AfterViewInit {
   emitRowAction(row: any) {
     this.rowAction.emit(row);
   }
-
+ 
+ 
   paginateTable($event: any): void {
     this.page.emit($event);
   }
