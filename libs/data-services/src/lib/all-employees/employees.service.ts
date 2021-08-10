@@ -14,26 +14,28 @@ export class EmployeesService {
   ) { }
 
 
-  type: string;
-  itemsPerPage = 10;
 
-  getEmployees(): Observable<EmployeesService> {
-
-
+  getEmployees( event?: any ): Observable<EmployeesService> {
 
     const query = EmployeeQuery
-    const allEmployees = this.apollo.query({  query: query,
+
+    const allEmployees = this.apollo.query({ 
+
+       query: query,
       variables: {
-        type: this.type,
-        offset:0,
-        limit: this.itemsPerPage,
+       start: event ? event.pageIndex * event.pageSize: 0,
+       limit:  event ? event.pageSize  : 10,
       }
      })
     console.log(allEmployees, 'employees')
+    console.log( 'event:', event)
     return from(allEmployees).pipe(pluck('data', 'employees')
     )
 }
- // just need to work on the fetchMore aspect of the query.  
+
+
+
+
 
 
 }

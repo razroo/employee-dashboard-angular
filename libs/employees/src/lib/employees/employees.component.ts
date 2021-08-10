@@ -15,7 +15,7 @@ export class EmployeesComponent implements OnInit {
   employees$ = this.employeesService.getEmployees();
 
   constructor(
-    public employeesService: EmployeesService
+    private employeesService: EmployeesService
   ) {}
 
 
@@ -64,6 +64,7 @@ return employees
 
   paginateTable($event: any): void {
     console.log('$event:', $event);
+    this.employeesService.getEmployees($event);
 
   }
 }

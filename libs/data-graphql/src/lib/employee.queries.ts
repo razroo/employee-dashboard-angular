@@ -3,11 +3,11 @@ import gql from 'graphql-tag';
 
 
 export const EmployeeQuery = gql`
-query getEmployees ($type: FeedType!, $offset: Intm = 0, $limit: Int;) {
-    employees (type: $type, offset: $offset, limit: $limit) {
+query getEmployees ( $start: Int, $limit: Int) {
+    employees (start: $start, limit: $limit) {
   
       Name
-      Position
+      Position  
       Location
       Permission
       Action
