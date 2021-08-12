@@ -26,7 +26,6 @@ export class EmployeesComponent implements OnInit {
   ngOnInit(): void {
 
     this.employees$.subscribe(employees => {
-    console.log(employees);
     return employees
     })
 
@@ -61,15 +60,15 @@ export class EmployeesComponent implements OnInit {
   }
 
 
-  paginateTable($event?: any): void {
+    paginateTable($event?: any): void {
     console.log('$event:', $event);
     this.employeesService.getEmployees($event);
+    }
+  
+    sortTable(sortEvent : any): void {
+    console.log('sorting event:', sortEvent);
+    this.employeesService.getEmployees(sortEvent);
+    }
 
-  }
-
-  sortTable($sortEvent: any): void {
-    console.log('sorting event:', $sortEvent);
-    this.employeesService.getEmployees($sortEvent);
-   
-  }
 }
+
