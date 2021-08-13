@@ -15,27 +15,26 @@ export class EmployeesService {
 
 
 
-  getEmployees( event?: any ): Observable<EmployeesService> {
+  getEmployees( event?: any , sortEvent?: any): Observable<EmployeesService> {
 
     const query = EmployeeQuery
-
     const allEmployees = this.apollo.query({ 
 
-       query: query,
-      variables: {
+      query: query,
+      variables: 
+      {
        start: event ? event.pageIndex * event.pageSize: 0,
        limit:  event ? event.pageSize  : 10,
+
+     
       }
+
      })
-    console.log(allEmployees, 'employees')
-    console.log( 'event:', event)
+
+
+    console.log( 'event asdasd:', event)
+    console.log( 'sort asdasd:', sortEvent)
     return from(allEmployees).pipe(pluck('data', 'employees')
     )
 }
-
-
-
-
-
-
 }
