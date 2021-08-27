@@ -10,31 +10,21 @@ import { EmployeeQuery } from '@razroo-fully-architected-dashboard/data-graphql'
 })
 
 export class EmployeesService {
-  constructor(public apollo: Apollo,
-  ) { }
-
-
+  constructor(public apollo: Apollo) { }
 
   getEmployees( event?: any , sortEvent?: any): Observable<EmployeesService> {
-
     const query = EmployeeQuery
-    const allEmployees = this.apollo.query({ 
+    const allEmployees = this.apollo.query({
 
       query: query,
-      variables: 
-      {
+      variables: {
        start: event ? event.pageIndex * event.pageSize: 0,
        limit:  event ? event.pageSize  : 10,
-
-     
       }
-
      })
-
 
     console.log( 'event asdasd:', event)
     console.log( 'sort asdasd:', sortEvent)
-    return from(allEmployees).pipe(pluck('data', 'employees')
-    )
-}
+    return from(allEmployees).pipe(pluck('data', 'employees'));
+  }
 }

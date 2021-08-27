@@ -6,29 +6,22 @@ import { EmployeesService } from '@razroo-fully-architected-dashboard/data-servi
   selector: 'razroo-fully-architected-dashboard-employees',
   templateUrl: './employees.component.html',
   styleUrls: ['./employees.component.scss'],
-
-}) 
-
+})
 
 export class EmployeesComponent implements OnInit {
-
   employees$ = this.employeesService.getEmployees();
 
   constructor(
     private employeesService: EmployeesService
   ) {}
 
-
   employeeTableColumns: TableColumn[];
-
-
 
   ngOnInit(): void {
 
     this.employees$.subscribe(employees => {
-    return employees
+      return employees
     })
-
 
     this.employeeTableColumns = [
       {
@@ -59,16 +52,15 @@ export class EmployeesComponent implements OnInit {
     ];
   }
 
-
-    paginateTable($event?: any): void {
+  paginateTable($event?: any): void {
     console.log('$event:', $event);
     this.employeesService.getEmployees($event);
-    }
-  
-    sortTable(sortEvent : any): void {
+  }
+
+  sortTable(sortEvent : any): void {
     console.log('sorting event:', sortEvent);
     this.employeesService.getEmployees(sortEvent);
-    }
+  }
 
 }
 
