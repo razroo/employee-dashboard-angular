@@ -4,7 +4,7 @@
   <ng-container *ngIf="isFilterable" [matColumnDef]="this.rowActionIcon">
     <mat-form-field>
       <mat-label>Filter</mat-label>
-      <input matInput (keyup)="applyFilter($event)" placeholder="filter">
+      <input matInput (keyup)="searchTable($event)" placeholder="filter">
     </mat-form-field>
   </ng-container>
 

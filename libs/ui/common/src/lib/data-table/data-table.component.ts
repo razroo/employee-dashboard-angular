@@ -26,14 +26,14 @@ export class DataTableComponent implements OnInit, AfterViewInit {
   @Output() sort: EventEmitter<Sort> = new EventEmitter();
   @Output() rowAction: EventEmitter<any> = new EventEmitter<any>();
   @Output() page: EventEmitter<Sort> = new EventEmitter();
+  @Output() search: EventEmitter<any> = new EventEmitter();
 
   // this property needs to have a setter, to dynamically get changes from parent component
   @Input() set tableData(data: any[]) {
     this.setTableDataSource(data);
   }
 
-  constructor() {
-  }
+  constructor() {}
 
   ngOnInit(): void {
     const columnNames = this.tableColumns.map((tableColumn: TableColumn) => tableColumn.name);
@@ -54,12 +54,12 @@ export class DataTableComponent implements OnInit, AfterViewInit {
     this.tableDataSource = new MatTableDataSource<any>(data);
     this.tableDataSource.paginator = this.matPaginator;
     this.tableDataSource.sort = this.matSort;
-  
+
   }
 
-  applyFilter(event: Event) {
+  searchTable(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
-    this.tableDataSource.filter = filterValue.trim().toLowerCase();
+    this.search.emit(filterValue);
   }
 
   sortTable(sortParameters: Sort) {
@@ -71,8 +71,8 @@ export class DataTableComponent implements OnInit, AfterViewInit {
   emitRowAction(row: any) {
     this.rowAction.emit(row);
   }
- 
- 
+
+
   paginateTable($event: any): void {
     this.page.emit($event);
   }
