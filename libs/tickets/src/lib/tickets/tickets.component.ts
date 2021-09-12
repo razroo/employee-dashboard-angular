@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TableColumn } from '@razroo-fully-architected-dashboard/ui/common';
+import { TicketsService } from '@razroo-fully-architected-dashboard/data-services';
+
 
 const ELEMENT_DATA = [
   {employeeName: 'Charlie Greenman', projectName: 'Razroo Angular Dashboard',
@@ -34,14 +36,20 @@ const ELEMENT_DATA = [
   templateUrl: './tickets.component.html',
   styleUrls: ['./tickets.component.scss']
 })
+
 export class TicketsComponent implements OnInit {
-  elementData;
+  // elementData;
+  tickets$ = this.ticketsService.getTickets();
+
+
+  constructor(
+    private ticketsService: TicketsService
+  ) { }
+
   ticketsTableColumns: TableColumn[];
 
-  constructor() { }
-
   ngOnInit(): void {
-    this.elementData = ELEMENT_DATA;
+    // this.elementData = ELEMENT_DATA;
 
     this.ticketsTableColumns = [
       {

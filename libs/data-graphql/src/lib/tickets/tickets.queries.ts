@@ -11,6 +11,6 @@ query getTickets ( $start: Int, $limit: Int, $sort: String, $where: JSON ) {
       ticketLink
       reporter
       designLink
+    }
   }
-}
 `;
