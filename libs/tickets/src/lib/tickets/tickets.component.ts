@@ -38,7 +38,7 @@ const ELEMENT_DATA = [
 })
 
 export class TicketsComponent implements OnInit {
-  // elementData;
+  elementData;
   tickets$ = this.ticketsService.getTickets();
 
 
@@ -49,7 +49,7 @@ export class TicketsComponent implements OnInit {
   ticketsTableColumns: TableColumn[];
 
   ngOnInit(): void {
-    // this.elementData = ELEMENT_DATA;
+    this.elementData = ELEMENT_DATA;
 
     this.ticketsTableColumns = [
       {
