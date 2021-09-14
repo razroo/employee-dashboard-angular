@@ -1,10 +1,10 @@
 export interface Ticket {
-  id:string;
-  employeeName:string;
-  projectName:string;
-  description:string;
-  ticketName:string;
-  ticketLink:string;
-  reporter:string;
-  designLink:string;
+  id: string;
+  employeeName: string;
+  projectName: string;
+  shortDescription: string;
+  ticketNumber: string;
+  ticketLink: string;
+  reporterName: string;
+  designLink: string;
 }
