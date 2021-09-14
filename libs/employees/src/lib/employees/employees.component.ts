@@ -13,7 +13,9 @@ export class EmployeesComponent implements OnInit {
 
   constructor(
     private employeesService: EmployeesService
-  ) {}
+  ) {
+    this.employeesService.getEmployees().subscribe()
+  }
 
   employeeTableColumns: TableColumn[];
 
