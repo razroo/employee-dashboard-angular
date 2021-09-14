@@ -46,12 +46,13 @@ export class TicketsComponent implements OnInit {
   constructor(
     private ticketsService: TicketsService
   ) {
-      this.ticketsService.getTickets().subscribe()
+
   }
 
   ticketsTableColumns: TableColumn[];
 
   ngOnInit(): void {
+    this.ticketsService.getTickets().subscribe(data=>console.log(data))
 
     this.ticketsTableColumns = [
       {
