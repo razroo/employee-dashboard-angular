@@ -15,6 +15,7 @@ export class TicketsService {
   getTickets(event?:any, sortEvent?: any): Observable<TicketsService> {
     console.log('event');
 
+
     const query = TicketsQuery
     const allTickets = this.apollo.query({
       query:query,
@@ -25,8 +26,8 @@ export class TicketsService {
         where: event ? {employeeName_contains: event.where} : {}
       }
      })
-    return from(allTickets).pipe(pluck('data', 'tickets')
-    );
+
+    return from(allTickets).pipe(pluck('data', 'tickets'));
     
   }
 }
