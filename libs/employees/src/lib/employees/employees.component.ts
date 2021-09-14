@@ -13,12 +13,12 @@ export class EmployeesComponent implements OnInit {
 
   constructor(
     private employeesService: EmployeesService
-  ) {}
+  ) { }
 
   employeeTableColumns: TableColumn[];
 
   ngOnInit(): void {
-
+    this.employeesService.getEmployees().subscribe()
     this.employeeTableColumns = [
       {
         name: 'Name',

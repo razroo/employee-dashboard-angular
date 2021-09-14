@@ -13,8 +13,8 @@ export class EmployeesService {
   constructor(public apollo: Apollo) { }
 
   getEmployees(event?: any, sortEvent?: any): Observable<EmployeesService> {
-    console.log('event');
-    console.log(event);
+    // console.log('event');
+    // console.log(event);
 
     const query = EmployeeQuery
     const allEmployees = this.apollo.query({

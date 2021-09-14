@@ -6,10 +6,10 @@ query getTickets ( $start: Int, $limit: Int, $sort: String, $where: JSON ) {
       id
       employeeName
       projectName
-      description
-      ticketName
+      shortDescription
+      ticketNumber
       ticketLink
-      reporter
+      reporterName
       designLink
     }
   }

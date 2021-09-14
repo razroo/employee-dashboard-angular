@@ -39,17 +39,20 @@ const ELEMENT_DATA = [
 
 export class TicketsComponent implements OnInit {
   elementData;
+
   tickets$ = this.ticketsService.getTickets();
 
 
   constructor(
     private ticketsService: TicketsService
-  ) { }
+  ) {
+
+  }
 
   ticketsTableColumns: TableColumn[];
 
   ngOnInit(): void {
-    this.elementData = ELEMENT_DATA;
+    this.ticketsService.getTickets().subscribe(data=>console.log(data))
 
     this.ticketsTableColumns = [
       {
@@ -89,5 +92,4 @@ export class TicketsComponent implements OnInit {
       }
     ];
   }
-
 }
