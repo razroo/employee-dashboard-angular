@@ -39,7 +39,6 @@ const ELEMENT_DATA = [
 
 export class TicketsComponent implements OnInit {
   elementData;
-
   tickets$ = this.ticketsService.getTickets();
 
 
@@ -89,17 +88,6 @@ export class TicketsComponent implements OnInit {
         isSortable: true,
       }
     ];
-     this.tickets$.subscribe();
-  }
-  paginateTable($event?: any): void {
-    this.ticketsService.getTickets($event);
   }
 
-  sortTable(sortEvent : any): void {
-    this.ticketsService.getTickets(sortEvent);
-  }
-
-  search(searchEvent: string): void {
-    this.tickets$ = this.ticketsService.getTickets({where: searchEvent})
-  }
 }
