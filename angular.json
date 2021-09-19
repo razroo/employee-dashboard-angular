@@ -1,5 +1,32 @@
 {
   "version": 1,
+  "cli": {
+    "defaultCollection": "@nrwl/angular"
+  },
+  "defaultProject": "employee-dashboard",
+  "schematics": {
+    "@nrwl/angular": {
+      "application": {
+        "linter": "eslint"
+      },
+      "library": {
+        "linter": "eslint"
+      },
+      "storybook-configuration": {
+        "linter": "eslint"
+      }
+    },
+    "@nrwl/angular:application": {
+      "linter": "eslint",
+      "unitTestRunner": "jest",
+      "e2eTestRunner": "cypress"
+    },
+    "@nrwl/angular:library": {
+      "linter": "eslint",
+      "unitTestRunner": "jest"
+    },
+    "@nrwl/angular:component": {}
+  },
   "projects": {
     "employee-dashboard": {
       "projectType": "application",
@@ -60,9 +87,7 @@
               ]
             }
           },
-          "outputs": [
-            "{options.outputPath}"
-          ]
+          "outputs": ["{options.outputPath}"]
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
@@ -96,9 +121,7 @@
             "jestConfig": "apps/employee-dashboard/jest.config.js",
             "passWithNoTests": true
           },
-          "outputs": [
-            "coverage/apps/employee-dashboard"
-          ]
+          "outputs": ["coverage/apps/employee-dashboard"]
         }
       }
     },
@@ -123,9 +146,7 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": [
-              "apps/employee-dashboard-e2e/**/*.{js,ts}"
-            ]
+            "lintFilePatterns": ["apps/employee-dashboard-e2e/**/*.{js,ts}"]
           }
         }
       }
@@ -151,9 +172,7 @@
             "jestConfig": "libs/employees/jest.config.js",
             "passWithNoTests": true
           },
-          "outputs": [
-            "coverage/libs/employees"
-          ]
+          "outputs": ["coverage/libs/employees"]
         }
       },
       "schematics": {
@@ -171,10 +190,7 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": [
-              "libs/ui/src/**/*.ts",
-              "libs/ui/src/**/*.html"
-            ]
+            "lintFilePatterns": ["libs/ui/src/**/*.ts", "libs/ui/src/**/*.html"]
           }
         },
         "test": {
@@ -183,9 +199,7 @@
             "jestConfig": "libs/ui/jest.config.js",
             "passWithNoTests": true
           },
-          "outputs": [
-            "coverage/libs/ui"
-          ]
+          "outputs": ["coverage/libs/ui"]
         }
       },
       "schematics": {
@@ -215,9 +229,7 @@
             "jestConfig": "libs/ui/common/jest.config.js",
             "passWithNoTests": true
           },
-          "outputs": [
-            "coverage/libs/ui/common"
-          ]
+          "outputs": ["coverage/libs/ui/common"]
         }
       },
       "schematics": {
@@ -247,9 +259,7 @@
             "jestConfig": "libs/repo-data/jest.config.js",
             "passWithNoTests": true
           },
-          "outputs": [
-            "coverage/libs/repo-data"
-          ]
+          "outputs": ["coverage/libs/repo-data"]
         }
       },
       "schematics": {
@@ -279,9 +289,7 @@
             "jestConfig": "libs/tickets/jest.config.js",
             "passWithNoTests": true
           },
-          "outputs": [
-            "coverage/libs/tickets"
-          ]
+          "outputs": ["coverage/libs/tickets"]
         }
       },
       "schematics": {
@@ -311,9 +319,7 @@
             "jestConfig": "libs/analytics/jest.config.js",
             "passWithNoTests": true
           },
-          "outputs": [
-            "coverage/libs/analytics"
-          ]
+          "outputs": ["coverage/libs/analytics"]
         }
       },
       "schematics": {
@@ -343,9 +349,7 @@
             "jestConfig": "libs/data-models/jest.config.js",
             "passWithNoTests": true
           },
-          "outputs": [
-            "coverage/libs/data-models"
-          ]
+          "outputs": ["coverage/libs/data-models"]
         }
       },
       "schematics": {
@@ -375,9 +379,7 @@
             "jestConfig": "libs/data-access/jest.config.js",
             "passWithNoTests": true
           },
-          "outputs": [
-            "coverage/libs/data-access"
-          ]
+          "outputs": ["coverage/libs/data-access"]
         }
       },
       "schematics": {
@@ -407,9 +409,7 @@
             "jestConfig": "libs/data-services/jest.config.js",
             "passWithNoTests": true
           },
-          "outputs": [
-            "coverage/libs/data-services"
-          ]
+          "outputs": ["coverage/libs/data-services"]
         }
       },
       "schematics": {
@@ -439,9 +439,7 @@
             "jestConfig": "libs/data-graphql/jest.config.js",
             "passWithNoTests": true
           },
-          "outputs": [
-            "coverage/libs/data-graphql"
-          ]
+          "outputs": ["coverage/libs/data-graphql"]
         }
       },
       "schematics": {
@@ -449,30 +447,56 @@
           "style": "scss"
         }
       }
-    }
-  },
-  "cli": {
-    "defaultCollection": "@nrwl/angular"
-  },
-  "schematics": {
-    "@nrwl/angular": {
-      "application": {
-        "linter": "eslint"
-      },
-      "library": {
-        "linter": "eslint"
-      },
-      "storybook-configuration": {
-        "linter": "eslint"
+    },
+    "libs-data-access-tickets": {
+      "projectType": "library",
+      "root": "libs/libs/data-access/tickets",
+      "sourceRoot": "libs/libs/data-access/tickets/src",
+      "prefix": "razroo-fully-architected-dashboard",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/libs/data-access/tickets"],
+          "options": {
+            "jestConfig": "libs/libs/data-access/tickets/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/libs/data-access/tickets/src/**/*.ts",
+              "libs/libs/data-access/tickets/src/**/*.html"
+            ]
+          }
+        }
       }
     },
-    "@nrwl/angular:application": {
-      "unitTestRunner": "jest",
-      "e2eTestRunner": "cypress"
-    },
-    "@nrwl/angular:library": {
-      "unitTestRunner": "jest"
+    "libs-data-access-data-access-tickets": {
+      "projectType": "library",
+      "root": "libs/libs/data-access/data-access-tickets",
+      "sourceRoot": "libs/libs/data-access/data-access-tickets/src",
+      "prefix": "razroo-fully-architected-dashboard",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/libs/data-access/data-access-tickets"],
+          "options": {
+            "jestConfig": "libs/libs/data-access/data-access-tickets/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/libs/data-access/data-access-tickets/src/**/*.ts",
+              "libs/libs/data-access/data-access-tickets/src/**/*.html"
+            ]
+          }
+        }
+      }
     }
-  },
-  "defaultProject": "employee-dashboard"
+  }
 }

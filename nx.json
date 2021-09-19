@@ -1,8 +1,4 @@
 {
-  "npmScope": "razroo-fully-architected-dashboard",
-  "affected": {
-    "defaultBase": "master"
-  },
   "implicitDependencies": {
     "angular.json": "*",
     "package.json": {
@@ -14,6 +10,10 @@
     ".eslintrc.json": "*",
     "nx.json": "*"
   },
+  "affected": {
+    "defaultBase": "master"
+  },
+  "npmScope": "razroo-fully-architected-dashboard",
   "tasksRunnerOptions": {
     "default": {
       "runner": "@nrwl/workspace/tasks-runners/default",
@@ -58,6 +58,12 @@
       "tags": []
     },
     "data-graphql": {
+      "tags": []
+    },
+    "libs-data-access-tickets": {
+      "tags": []
+    },
+    "libs-data-access-data-access-tickets": {
       "tags": []
     }
   }

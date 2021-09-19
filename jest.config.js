@@ -11,5 +11,7 @@ module.exports = {
     '<rootDir>/libs/data-access',
     '<rootDir>/libs/data-services',
     '<rootDir>/libs/data-graphql',
+    '<rootDir>/libs/libs/data-access/tickets',
+    '<rootDir>/libs/libs/data-access/data-access-tickets',
   ],
 };

@@ -5,6 +5,9 @@ import { EffectsModule } from '@ngrx/effects';
 import * as fromEmployees from './+state/employees.reducer';
 import { EmployeesEffects } from './+state/employees.effects';
 import { EmployeesFacade } from './+state/employees.facade';
+import * as fromTickets from './+state/tickets.reducer';
+import { TicketsEffects } from './+state/tickets.effects';
+import { TicketsFacade } from './+state/tickets.facade';
 
 @NgModule({
   imports: [
@@ -14,7 +17,12 @@ import { EmployeesFacade } from './+state/employees.facade';
       fromEmployees.reducer
     ),
     EffectsModule.forFeature([EmployeesEffects]),
+    StoreModule.forFeature(
+      fromTickets.TICKETS_FEATURE_KEY,
+      fromTickets.reducer
+    ),
+    EffectsModule.forFeature([TicketsEffects]),
   ],
-  providers: [EmployeesFacade],
+  providers: [EmployeesFacade, TicketsFacade],
 })
 export class DataAccessModule {}
