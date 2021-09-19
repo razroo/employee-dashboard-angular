@@ -5,6 +5,7 @@ import { EffectsModule } from '@ngrx/effects';
 import * as fromEmployees from './+state/employees.reducer';
 import { EmployeesEffects } from './+state/employees.effects';
 import { EmployeesFacade } from './+state/employees.facade';
+import { DataAccessTicketsModule } from '@razroo-fully-architected-dashboard/data-access/tickets';
 
 @NgModule({
   imports: [
@@ -14,6 +15,7 @@ import { EmployeesFacade } from './+state/employees.facade';
       fromEmployees.reducer
     ),
     EffectsModule.forFeature([EmployeesEffects]),
+    DataAccessTicketsModule
   ],
   providers: [EmployeesFacade],
 })

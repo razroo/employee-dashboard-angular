@@ -6,7 +6,6 @@ import * as fromTickets from './+state/tickets.reducer';
 import { TicketsEffects } from './+state/tickets.effects';
 import { TicketsFacade } from './+state/tickets.facade';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
-import { environment } from '../../../../../apps/employee-dashboard/src/environments/environment'
 
 
 @NgModule({
@@ -18,9 +17,10 @@ import { environment } from '../../../../../apps/employee-dashboard/src/environm
     ),
     StoreDevtoolsModule.instrument({
       maxAge: 25, // Retains last 25 states
-      logOnly: environment.production, // Restrict extension to log-only mode
-      autoPause: false, // Pauses recording actions and state changes when the extension window is not open
+      logOnly: true, // Restrict extension to log-only mode
+      autoPause: true
     }),
+
     EffectsModule.forFeature([TicketsEffects]),
   ],
   providers: [TicketsFacade],
