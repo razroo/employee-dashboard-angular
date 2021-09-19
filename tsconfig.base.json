@@ -43,6 +43,9 @@
       ],
       "@razroo-fully-architected-dashboard/data-graphql": [
         "libs/data-graphql/src/index.ts"
+      ],
+      "@razroo-fully-architected-dashboard/data-access/tickets": [
+        "libs/data-access/tickets/src/index.ts"
       ]
     }
   },
