@@ -15,7 +15,7 @@ export class TicketsEffects {
       ofType(TicketsActions.init),
       fetch({
         run: (action) => {
-          return this.ticketsService.getTickets().pipe(
+          return this.TicketsService.getTickets().pipe(
             map((tickets: TicketsEntity[]) => TicketsActions.loadTicketsSuccess({ tickets: tickets })))
           );
         },
