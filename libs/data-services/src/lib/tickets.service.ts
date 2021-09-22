@@ -7,7 +7,6 @@ import { TicketsQuery } from '@razroo-fully-architected-dashboard/data-graphql';
 @Injectable({
   providedIn: 'root'
 })
-
 export class TicketsService {
 
   constructor(public apollo: Apollo) { }
@@ -28,6 +27,6 @@ export class TicketsService {
      })
 
     return from(allTickets).pipe(pluck('data', 'tickets'));
-    
+
   }
 }
