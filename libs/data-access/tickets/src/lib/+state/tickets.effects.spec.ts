@@ -29,9 +29,9 @@ describe('TicketsEffects', () => {
     effects = TestBed.inject(TicketsEffects);
   });
 
-  describe('init$', () => {
+  describe('loadTickets$', () => {
     it('should work', () => {
-      actions = hot('-a-|', { a: TicketsActions.init() });
+      actions = hot('-a-|', { a: TicketsActions.loadTickets() });
 
       const expected = hot('-a-|', {
         a: TicketsActions.loadTicketsSuccess({ tickets: [] }),

@@ -1,9 +1,12 @@
+import { TicketsEntity } from './tickets.models';
+import { TicketsService } from '@razroo-fully-architected-dashboard/data-services';
 import { Injectable } from '@angular/core';
 import { createEffect, Actions, ofType } from '@ngrx/effects';
 import { fetch } from '@nrwl/angular';
 
 import * as TicketsFeature from './tickets.reducer';
 import * as TicketsActions from './tickets.actions';
+import { map } from 'rxjs/operators';
 
 @Injectable()
 export class TicketsEffects {
@@ -12,8 +15,9 @@ export class TicketsEffects {
       ofType(TicketsActions.init),
       fetch({
         run: (action) => {
-          // Your custom service 'load' logic goes here. For now just return a success action...
-          return TicketsActions.loadTicketsSuccess({ tickets: [] });
+          return this.ticketsService.getTickets().pipe(
+            map((tickets: TicketsEntity[]) => TicketsActions.loadTicketsSuccess({ tickets: tickets })))
+          );
         },
 
         onError: (action, error) => {
@@ -24,5 +28,7 @@ export class TicketsEffects {
     )
   );
 
-  constructor(private actions$: Actions) {}
+  constructor(private actions$: Actions, private ticketsService: TicketsService) {
+
+  }
 }

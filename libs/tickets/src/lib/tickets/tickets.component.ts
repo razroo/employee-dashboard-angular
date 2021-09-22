@@ -1,6 +1,6 @@
+import { TicketsFacade } from './../../../../data-access/tickets/src/lib/+state/tickets.facade';
 import { Component, OnInit } from '@angular/core';
 import { TableColumn } from '@razroo-fully-architected-dashboard/ui/common';
-import { TicketsService } from '@razroo-fully-architected-dashboard/data-services';
 
 
 const ELEMENT_DATA = [
@@ -40,11 +40,11 @@ const ELEMENT_DATA = [
 export class TicketsComponent implements OnInit {
   elementData;
 
-  tickets$ = this.ticketsService.getTickets();
+  tickets$ = this.ticketsFacade.loaded$;
 
 
   constructor(
-    private ticketsService: TicketsService
+    private ticketsFacade: TicketsFacade
   ) {
 
   }
@@ -52,7 +52,7 @@ export class TicketsComponent implements OnInit {
   ticketsTableColumns: TableColumn[];
 
   ngOnInit(): void {
-    this.ticketsService.getTickets().subscribe(data=>console.log(data))
+    this.ticketsFacade.init();
 
     this.ticketsTableColumns = [
       {
