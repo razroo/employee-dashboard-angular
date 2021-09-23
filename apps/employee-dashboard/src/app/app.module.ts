@@ -1,3 +1,4 @@
+import { DataAccessModule } from './../../../../libs/data-access/src/lib/data-access.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
@@ -20,7 +21,8 @@ import {InMemoryCache} from '@apollo/client/core';
   declarations: [AppComponent],
   imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule,
     UiCommonModule, MatToolbarModule, MatSidenavModule, MatListModule,
-    MatIconModule, MatButtonModule, FontAwesomeModule,HttpClientModule],
+    MatIconModule, MatButtonModule, FontAwesomeModule,HttpClientModule,
+    DataAccessModule],
   providers: [{
     provide: APOLLO_OPTIONS,
     useFactory: (httpLink: HttpLink) => {

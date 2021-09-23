@@ -46,7 +46,9 @@
       ],
       "@razroo-fully-architected-dashboard/data-access/tickets": [
         "libs/data-access/tickets/src/index.ts"
-      ]
+      ],
+      "rxjs": ["node_modules/rxjs"],
+      "rxjs/*": ["node_modules/rxjs/*"]
     }
   },
   "exclude": ["node_modules", "tmp"]
