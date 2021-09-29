@@ -11,13 +11,11 @@ export class TicketsService {
 
   constructor(public apollo: Apollo) { }
 
-  getTickets(event?:any, sortEvent?: any): Observable<TicketsService> {
+  getTickets(event?:any, sortEvent?: any): any {
     const query = TicketsQuery
     const variables = {
       start: event ? event.pageIndex * event.pageSize: 0,
       limit:  event ? event.pageSize  : 10,
-      sort: 'employeeName:asc,employeeName:desc',
-      where: event ? {employeeName_contains: event.where} : {}
     }
 
     const allTickets = this.apollo.query({query, variables})

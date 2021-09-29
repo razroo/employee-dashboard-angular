@@ -1,9 +1,9 @@
+import { DataAccessTicketsModule } from './../../tickets/src/lib/data-access-tickets.module';
 import { environment } from './../../../../apps/employee-dashboard/src/environments/environment';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
-import { EmployeesFacade } from './+state/employees.facade';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
 @NgModule({
@@ -20,8 +20,9 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
         },
       }
     ),
+    DataAccessTicketsModule,
     !environment.production ? StoreDevtoolsModule.instrument() : [],
   ],
-  providers: [EmployeesFacade],
+  providers: [],
 })
 export class DataAccessModule {}

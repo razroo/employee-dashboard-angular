@@ -7,7 +7,6 @@ import { TableColumn } from '@razroo-fully-architected-dashboard/ui/common';
   templateUrl: './tickets.component.html',
   styleUrls: ['./tickets.component.scss']
 })
-
 export class TicketsComponent implements OnInit {
   tickets$ = this.ticketsFacade.loaded$;
   constructor(
