@@ -1,10 +1,10 @@
 import { createAction, props } from '@ngrx/store';
 import { TicketsEntity } from './tickets.models';
 
-export const init = createAction('[Tickets Page] Init');
+export const loadTickets = createAction('[Tickets] Load Tickets');
 
 export const loadTicketsSuccess = createAction(
-  '[Tickets/API] Load Tickets Success',
+  '[Tickets] Load Tickets Success',
   props<{ tickets: TicketsEntity[] }>()
 );
 

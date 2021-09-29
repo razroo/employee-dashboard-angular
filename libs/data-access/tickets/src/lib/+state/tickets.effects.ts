@@ -11,18 +11,12 @@ import { map } from 'rxjs/operators';
 export class TicketsEffects {
   init$ = createEffect(() =>
     this.actions$.pipe(
-      ofType(TicketsActions.init),
+      ofType(TicketsActions.loadTickets),
       fetch({
         run: (action) => {
-<<<<<<< HEAD
-          return this.TicketsService.getTickets().pipe(
-            map((tickets: TicketsEntity[]) => TicketsActions.loadTicketsSuccess({ tickets: tickets })))
-          ;
-=======
           return this.ticketsService.getTickets().pipe(
             map((tickets: TicketsEntity[]) => TicketsActions.loadTicketsSuccess({ tickets: tickets }))
           );
->>>>>>> 0ce1c7c3dfd778b98110365c08b141a64a8c01c3
         },
         onError: (action, error) => {
           console.error('Error', error);
