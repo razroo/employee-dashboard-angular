@@ -5,7 +5,8 @@ import { TicketsRoutingModule } from './tickets-routing.module';
 import { UiCommonModule } from '@razroo-fully-architected-dashboard/ui/common';
 
 @NgModule({
-  imports: [CommonModule, TicketsRoutingModule, UiCommonModule],
+  imports: [CommonModule, UiCommonModule, TicketsRoutingModule],
   declarations: [TicketsComponent],
+  exports: [TicketsComponent],
 })
 export class TicketsModule {}

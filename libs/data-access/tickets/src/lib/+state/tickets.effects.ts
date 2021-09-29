@@ -1,10 +1,9 @@
+import { TicketsService } from './../../../../../data-services/src/lib/tickets.service';
 import { TicketsEntity } from './tickets.models';
-import { TicketsService } from '@razroo-fully-architected-dashboard/data-services';
 import { Injectable } from '@angular/core';
 import { createEffect, Actions, ofType } from '@ngrx/effects';
 import { fetch } from '@nrwl/angular';
 
-import * as TicketsFeature from './tickets.reducer';
 import * as TicketsActions from './tickets.actions';
 import { map } from 'rxjs/operators';
 
@@ -15,11 +14,16 @@ export class TicketsEffects {
       ofType(TicketsActions.init),
       fetch({
         run: (action) => {
+<<<<<<< HEAD
           return this.TicketsService.getTickets().pipe(
             map((tickets: TicketsEntity[]) => TicketsActions.loadTicketsSuccess({ tickets: tickets })))
           ;
+=======
+          return this.ticketsService.getTickets().pipe(
+            map((tickets: TicketsEntity[]) => TicketsActions.loadTicketsSuccess({ tickets: tickets }))
+          );
+>>>>>>> 0ce1c7c3dfd778b98110365c08b141a64a8c01c3
         },
-
         onError: (action, error) => {
           console.error('Error', error);
           return TicketsActions.loadTicketsFailure({ error });
@@ -28,7 +32,5 @@ export class TicketsEffects {
     )
   );
 
-  constructor(private actions$: Actions, private ticketsService: TicketsService) {
-
-  }
+  constructor(private actions$: Actions, private ticketsService: TicketsService) {}
 }
