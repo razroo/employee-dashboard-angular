@@ -17,7 +17,7 @@ export class TicketsEffects {
         run: (action) => {
           return this.TicketsService.getTickets().pipe(
             map((tickets: TicketsEntity[]) => TicketsActions.loadTicketsSuccess({ tickets: tickets })))
-          );
+          ;
         },
 
         onError: (action, error) => {
