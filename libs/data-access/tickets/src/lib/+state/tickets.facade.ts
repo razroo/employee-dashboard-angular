@@ -18,3 +18,5 @@ export class TicketsFacade {
     this.store.dispatch(TicketsActions.loadTickets());
   }
 }
+
+console.log(TicketsSelectors.getAllTickets)

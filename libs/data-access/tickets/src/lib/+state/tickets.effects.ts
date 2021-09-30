@@ -17,6 +17,7 @@ export class TicketsEffects {
           return this.ticketsService.getTickets().pipe(
             map((tickets: TicketsEntity[]) => TicketsActions.loadTicketsSuccess({ tickets: tickets }))
           );
+          
         },
         onError: (action, error) => {
           console.error('Error', error);
@@ -24,7 +25,7 @@ export class TicketsEffects {
         },
       })
     )
-  );
-
+  ); 
   constructor(private actions$: Actions, private ticketsService: TicketsService) {}
 }
+
