@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-import { select, Store } from '@ngrx/store';
+import { select, Store, props } from '@ngrx/store';
 
 import * as TicketsActions from './tickets.actions';
 import * as fromTickets from './tickets.reducer';
@@ -15,6 +15,6 @@ export class TicketsFacade {
   constructor(private store: Store<fromTickets.TicketsPartialState>) {}
 
   init() {
-    this.store.dispatch(TicketsActions.loadTickets());
+    this.store.dispatch(TicketsActions.loadTicketsSuccess();
   }
 }
