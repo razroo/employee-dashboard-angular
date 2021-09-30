@@ -1,4 +1,3 @@
-import { loadTickets } from './../../../../data-access/tickets/src/lib/+state/tickets.actions';
 import { TicketsFacade } from './../../../../data-access/tickets/src/lib/+state/tickets.facade';
 import { Component, OnInit } from '@angular/core';
 import { TableColumn } from '@razroo-fully-architected-dashboard/ui/common';
@@ -59,4 +58,3 @@ export class TicketsComponent implements OnInit {
     ];
   }
 }
-console.log(TicketsFacade)

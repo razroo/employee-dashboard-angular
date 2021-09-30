@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { from, Observable} from 'rxjs'
+import { from} from 'rxjs'
 import { pluck} from 'rxjs/operators';
 import { Apollo } from 'apollo-angular';
 import { TicketsQuery } from '@razroo-fully-architected-dashboard/data-graphql';
