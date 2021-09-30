@@ -17,7 +17,12 @@ export class TicketsComponent implements OnInit {
   ticketsTableColumns: TableColumn[];
 
   ngOnInit(): void {
-    this.ticketsFacade.init()
+    this.ticketsFacade.init();
+    
+    this.tickets$.subscribe(data => {
+      console.log('data');
+      console.log(data);
+    });
 
     this.ticketsTableColumns = [
       {

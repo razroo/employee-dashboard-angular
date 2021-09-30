@@ -25,7 +25,7 @@ export const initialState: State = ticketsAdapter.getInitialState({
 
 const ticketsReducer = createReducer(
   initialState,
-  on(TicketsActions.loadTickets, (state) => ({
+  on(TicketsActions.init, (state) => ({
     ...state,
     loaded: false,
     error: null,
