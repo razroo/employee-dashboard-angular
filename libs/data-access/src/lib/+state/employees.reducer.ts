@@ -16,9 +16,7 @@ export interface EmployeesPartialState {
   readonly [EMPLOYEES_FEATURE_KEY]: State;
 }
 
-export const employeesAdapter: EntityAdapter<EmployeesEntity> = createEntityAdapter<
-  EmployeesEntity
->();
+export const employeesAdapter: EntityAdapter<EmployeesEntity> = createEntityAdapter<EmployeesEntity>();
 
 export const initialState: State = employeesAdapter.getInitialState({
   // set initial required properties

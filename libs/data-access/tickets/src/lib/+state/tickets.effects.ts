@@ -11,12 +11,13 @@ import { map } from 'rxjs/operators';
 export class TicketsEffects {
   init$ = createEffect(() =>
     this.actions$.pipe(
-      ofType(TicketsActions.init),
+      ofType(TicketsActions.loadTickets),
       fetch({
         run: (action) => {
           return this.ticketsService.getTickets().pipe(
             map((tickets: TicketsEntity[]) => TicketsActions.loadTicketsSuccess({ tickets: tickets }))
           );
+          
         },
         onError: (action, error) => {
           console.error('Error', error);
@@ -24,7 +25,7 @@ export class TicketsEffects {
         },
       })
     )
-  );
-
+  ); 
   constructor(private actions$: Actions, private ticketsService: TicketsService) {}
 }
+

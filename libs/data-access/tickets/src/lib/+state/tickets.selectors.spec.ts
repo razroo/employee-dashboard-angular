@@ -51,13 +51,13 @@ describe('Tickets Selectors', () => {
       expect(selId).toBe('PRODUCT-BBB');
     });
 
-    it("getTicketsLoaded() should return the current 'loaded' status", () => {
+    it('getTicketsLoaded() should return the current \'loaded\' status', () => {
       const result = TicketsSelectors.getTicketsLoaded(state);
 
       expect(result).toBe(true);
     });
 
-    it("getTicketsError() should return the current 'error' state", () => {
+    it('getTicketsError() should return the current \'error\' state', () => {
       const result = TicketsSelectors.getTicketsError(state);
 
       expect(result).toBe(ERROR_MSG);
