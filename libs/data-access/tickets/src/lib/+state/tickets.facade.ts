@@ -15,6 +15,6 @@ export class TicketsFacade {
   constructor(private store: Store<fromTickets.TicketsPartialState>) {}
 
   init() {
-    this.store.dispatch(TicketsActions.loadTicketsSuccess();
+    this.store.dispatch(TicketsActions.loadTickets());
   }
 }
