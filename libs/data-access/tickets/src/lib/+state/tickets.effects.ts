@@ -11,7 +11,7 @@ import { map } from 'rxjs/operators';
 export class TicketsEffects {
   init$ = createEffect(() =>
     this.actions$.pipe(
-      ofType(TicketsActions.loadTickets),
+      ofType(TicketsActions.init),
       fetch({
         run: (action) => {
           return this.ticketsService.getTickets().pipe(

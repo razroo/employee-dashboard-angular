@@ -1,3 +1,4 @@
+import { TicketsEntity } from './tickets.models';
 import { Injectable } from '@angular/core';
 
 import { select, Store } from '@ngrx/store';
@@ -12,9 +13,9 @@ export class TicketsFacade {
   allTickets$ = this.store.pipe(select(TicketsSelectors.getAllTickets));
   selectedTickets$ = this.store.pipe(select(TicketsSelectors.getSelected));
 
-  constructor(private store: Store<fromTickets.TicketsPartialState>) {}
+  constructor(private store: Store<TicketsEntity>) {}
 
   init() {
-    this.store.dispatch(TicketsActions.loadTickets());
+    this.store.dispatch(TicketsActions.init());
   }
 }
