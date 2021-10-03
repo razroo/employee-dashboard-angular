@@ -9,7 +9,8 @@ import { TableColumn } from '@razroo-fully-architected-dashboard/ui/common';
 })
 export class TicketsComponent implements OnInit {
   tickets$ = this.ticketsFacade.allTickets$;
-  
+  TicketsService: any;
+
   constructor(
     private ticketsFacade: TicketsFacade
   ) {}
@@ -17,6 +18,7 @@ export class TicketsComponent implements OnInit {
   ticketsTableColumns: TableColumn[];
 
   ngOnInit(): void {
+    
     this.ticketsFacade.init();
 
 
@@ -57,5 +59,8 @@ export class TicketsComponent implements OnInit {
         isSortable: true,
       }
     ];
+  }
+  paginateTable($event?: any): void {
+    this.TicketsService.getTickets($event);
   }
 }
