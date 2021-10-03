@@ -8,7 +8,7 @@ import { TableColumn } from '@razroo-fully-architected-dashboard/ui/common';
   styleUrls: ['./tickets.component.scss']
 })
 export class TicketsComponent implements OnInit {
-  tickets$ = this.ticketsFacade.init();
+  tickets$ = this.ticketsFacade.allTickets$;
   
   constructor(
     private ticketsFacade: TicketsFacade
