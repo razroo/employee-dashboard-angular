@@ -28,7 +28,7 @@ const ticketsReducer = createReducer(
   on(TicketsActions.init, (state) => ({
     ...state,
     loaded: false,
-    error: 'null',
+    error: null,
   })),
   on(TicketsActions.loadTicketsSuccess, (state, { tickets }) =>
     ticketsAdapter.setAll(tickets, { ...state, loaded: true })
