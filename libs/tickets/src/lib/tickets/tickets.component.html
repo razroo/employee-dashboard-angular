@@ -6,6 +6,7 @@
   isSortable="true"
   isFilterable="true"
   isPageable="true"
+  (page)="paginateTable($event)"
   [paginationSizes]="[5,10,15]"
   [defaultPageSize]="10">
 </razroo-fully-architected-dashboard-data-table>
