@@ -16,5 +16,6 @@ export class TicketsFacade {
 
   init() {
     this.store.dispatch(TicketsActions.init());
+    console.log('hello')
   }
 }

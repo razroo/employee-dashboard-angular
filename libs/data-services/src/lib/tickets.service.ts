@@ -23,4 +23,4 @@ export class TicketsService {
     return from(allTickets).pipe(pluck('data', 'tickets'));
 
   }
-};
+}
