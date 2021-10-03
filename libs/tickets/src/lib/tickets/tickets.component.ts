@@ -8,7 +8,7 @@ import { TableColumn } from '@razroo-fully-architected-dashboard/ui/common';
   styleUrls: ['./tickets.component.scss']
 })
 export class TicketsComponent implements OnInit {
-  tickets$ = this.ticketsFacade.loaded$;
+  tickets$ = this.ticketsFacade.init();
   
   constructor(
     private ticketsFacade: TicketsFacade
@@ -18,11 +18,11 @@ export class TicketsComponent implements OnInit {
 
   ngOnInit(): void {
     this.ticketsFacade.init();
-    
-    this.tickets$.subscribe(data => {
-      console.log('data');
-      console.log(data);
-    });
+
+    // this.tickets$.subscribe(data => {
+    //   console.log('data');
+    //   console.log(data);
+    // });
 
     this.ticketsTableColumns = [
       {

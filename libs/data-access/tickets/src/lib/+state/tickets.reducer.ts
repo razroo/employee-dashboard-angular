@@ -20,7 +20,7 @@ export const ticketsAdapter: EntityAdapter<TicketsEntity> = createEntityAdapter<
 
 export const initialState: State = ticketsAdapter.getInitialState({
   // set initial required properties
-  loaded: false,
+  loaded: true,
 });
 
 const ticketsReducer = createReducer(
@@ -28,7 +28,7 @@ const ticketsReducer = createReducer(
   on(TicketsActions.init, (state) => ({
     ...state,
     loaded: false,
-    error: null,
+    error: 'null',
   })),
   on(TicketsActions.loadTicketsSuccess, (state, { tickets }) =>
     ticketsAdapter.setAll(tickets, { ...state, loaded: true })
