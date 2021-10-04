@@ -9,7 +9,6 @@ import { TableColumn } from '@razroo-fully-architected-dashboard/ui/common';
 })
 export class TicketsComponent implements OnInit {
   tickets$ = this.ticketsFacade.allTickets$;
-  TicketsService: any;
 
   constructor(
     private ticketsFacade: TicketsFacade
@@ -61,6 +60,6 @@ export class TicketsComponent implements OnInit {
     ];
   }
   paginateTable($event?: any): void {
-    this.TicketsService.getTickets($event);
+    this.ticketsFacade.init();
   }
 }
