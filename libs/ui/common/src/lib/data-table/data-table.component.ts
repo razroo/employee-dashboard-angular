@@ -14,6 +14,7 @@ export class DataTableComponent implements OnInit, AfterViewInit {
   public displayedColumns: string[];
   @ViewChild(MatPaginator, {static: false}) matPaginator: MatPaginator;
   @ViewChild(MatSort, {static: true}) matSort: MatSort;
+  
 
   @Input() isPageable = false;
   @Input() isSortable = false;
@@ -46,15 +47,14 @@ export class DataTableComponent implements OnInit, AfterViewInit {
 
   // we need this, in order to make pagination work with *ngIf
   ngAfterViewInit(): void {
-    this.tableDataSource.paginator = this.matPaginator;
+    this.tableDataSource.paginator = this.matPaginator
+    this.tableDataSource.sort = this.matSort;
   }
 
 
   setTableDataSource(data: any) {
     this.tableDataSource = new MatTableDataSource<any>(data);
     this.tableDataSource.paginator = this.matPaginator;
-    this.tableDataSource.sort = this.matSort;
-
   }
 
   searchTable(event: Event) {
@@ -66,6 +66,7 @@ export class DataTableComponent implements OnInit, AfterViewInit {
     // defining name of data property, to sort by, instead of column name
     sortParameters.active = this.tableColumns.find(column => column.name === sortParameters.active).dataKey;
     this.sort.emit(sortParameters);
+    this.tableDataSource.sort = this.matSort;
   }
 
   emitRowAction(row: any) {

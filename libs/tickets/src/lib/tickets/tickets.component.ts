@@ -9,7 +9,10 @@ import { TableColumn,  } from '@razroo-fully-architected-dashboard/ui/common';
 })
 export class TicketsComponent implements OnInit {
   tickets$ = this.ticketsFacade.allTickets$;
+  MatTableDataSource: any;
+  sort: any;
 
+  
   constructor(
     private ticketsFacade: TicketsFacade
   ) {}

@@ -9,7 +9,7 @@
   </ng-container>
 
   <!-- Table -->
-  <table mat-table [dataSource]="tableDataSource" matSort (matSortChange)="sortTable($event)">
+  <table mat-table [dataSource]="tableDataSource" matSort>
 
     <!-- action column -->
     <ng-container *ngIf="rowActionIcon?.length" [matColumnDef]="rowActionIcon">
