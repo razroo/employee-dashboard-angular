@@ -4,7 +4,6 @@ import { Injectable } from '@angular/core';
 import { select, Store } from '@ngrx/store';
 
 import * as TicketsActions from './tickets.actions';
-import * as fromTickets from './tickets.reducer';
 import * as TicketsSelectors from './tickets.selectors';
 
 @Injectable()
