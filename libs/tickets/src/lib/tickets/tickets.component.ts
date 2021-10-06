@@ -17,6 +17,7 @@ export class TicketsComponent implements OnInit {
   ticketsTableColumns: TableColumn[];
 
   ngOnInit(): void {
+    
     this.ticketsFacade.init();
 
     this.ticketsTableColumns = [
