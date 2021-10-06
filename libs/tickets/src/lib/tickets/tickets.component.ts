@@ -65,4 +65,4 @@ export class TicketsComponent implements OnInit {
   sortTable(sortEvent: any) : void {
     this.ticketsFacade.init();
   }
-}
+};

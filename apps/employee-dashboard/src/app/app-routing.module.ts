@@ -1,3 +1,5 @@
+import { TicketsComponent } from './../../../../libs/tickets/src/lib/tickets/tickets.component';
+import { MatTableModule } from '@angular/material/table';
 import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
 
