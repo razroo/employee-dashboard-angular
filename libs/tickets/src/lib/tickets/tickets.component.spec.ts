@@ -49,5 +49,16 @@ describe('TicketsComponent', () => {
     component.sortTable();
     expect(ticketsFacade.init).toBeCalled();
   });
+
+  it('should test ngOnInit', () => {
+    expect(component.ngOnInit).toBeTruthy();
+  });
+
+  it('should call ticketsFacade.init() when call SortTable', () => {
+    spyOn(component, 'ngOnInit');
+    component.ngOnInit();
+    expect(component.ngOnInit).toBeCalled();
+  });
+
 });
 
