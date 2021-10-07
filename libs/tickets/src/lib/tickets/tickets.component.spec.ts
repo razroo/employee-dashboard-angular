@@ -43,5 +43,11 @@ describe('TicketsComponent', () => {
     component.paginateTable();
     expect(ticketsFacade.init).toBeCalled();
   });
+
+  it('should call ticketsFacade.init() when call SortTable', () => {
+    spyOn(ticketsFacade, 'init');
+    component.sortTable();
+    expect(ticketsFacade.init).toBeCalled();
+  });
 });
 

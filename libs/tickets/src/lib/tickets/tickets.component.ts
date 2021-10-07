@@ -62,7 +62,7 @@ export class TicketsComponent implements OnInit {
     this.ticketsFacade.init();
   }
 
-  sortTable(sortEvent: any) : void {
+  sortTable(sortEvent?: any) : void {
     this.ticketsFacade.init();
   }
 };
