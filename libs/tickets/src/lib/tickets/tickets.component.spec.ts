@@ -13,6 +13,7 @@ class TicketsFacadeMock {
 
 describe('TicketsComponent', () => {
   let component: TicketsComponent;
+  let ticketsFacade: TicketsFacade;
   let fixture: ComponentFixture<TicketsComponent>;
 
   beforeEach(async () => {
@@ -28,6 +29,7 @@ describe('TicketsComponent', () => {
 
   beforeEach(() => {
     fixture = TestBed.createComponent(TicketsComponent);
+    ticketsFacade = TestBed.get(TicketsFacade);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
@@ -35,4 +37,11 @@ describe('TicketsComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should call ticketsFacade.init() when call paginaiton method', () => {
+    spyOn(ticketsFacade, 'init');
+    component.paginateTable();
+    expect(ticketsFacade.init).toBeCalled();
+  });
 });
+
