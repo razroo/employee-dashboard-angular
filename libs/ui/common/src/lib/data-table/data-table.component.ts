@@ -47,8 +47,8 @@ export class DataTableComponent implements OnInit, AfterViewInit {
 
   // we need this, in order to make pagination work with *ngIf
   ngAfterViewInit(): void {
-    this.tableDataSource.paginator = this.matPaginator
-    this.tableDataSource.sort = this.matSort;
+    this.tableDataSource.paginator = this.matPaginator;
+    this.tableDataSource.sort = this.matSort
   }
 
 

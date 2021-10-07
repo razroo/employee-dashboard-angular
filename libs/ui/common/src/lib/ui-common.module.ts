@@ -1,3 +1,4 @@
+import { MatIconModule } from '@angular/material/icon';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LayoutComponent } from './layout/layout.component';
@@ -14,7 +15,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 
 @NgModule({
   imports: [CommonModule, MatSidenavModule, MatToolbarModule, RouterModule,
-    MatTableModule, MatSortModule, MatPaginatorModule, MatInputModule, MatFormFieldModule],
+    MatTableModule, MatSortModule, MatPaginatorModule, MatInputModule, MatFormFieldModule, MatIconModule],
   declarations: [LayoutComponent, DataTableComponent, DataPropertyGetterPipe],
   exports: [LayoutComponent, DataTableComponent],
 })

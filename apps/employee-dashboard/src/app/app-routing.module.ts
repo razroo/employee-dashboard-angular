@@ -1,3 +1,5 @@
+import { TicketsComponent } from './../../../../libs/tickets/src/lib/tickets/tickets.component';
+import { MatTableModule } from '@angular/material/table';
 import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
 
@@ -30,7 +32,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [ RouterModule.forRoot(routes, { onSameUrlNavigation: 'reload', relativeLinkResolution: 'legacy' } ) ],
+  imports: [ RouterModule.forRoot(routes, { onSameUrlNavigation: 'reload', relativeLinkResolution: 'legacy' } )],
   exports: [ RouterModule ]
 })
 export class AppRoutingModule { }
