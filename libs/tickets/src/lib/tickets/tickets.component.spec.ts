@@ -54,7 +54,7 @@ describe('TicketsComponent', () => {
     expect(component.ngOnInit).toBeTruthy();
   });
 
-  it('should call ticketsFacade.init() when call SortTable', () => {
+  it('should call component.ngOnIit() ', () => {
     spyOn(component, 'ngOnInit');
     component.ngOnInit();
     expect(component.ngOnInit).toBeCalled();
