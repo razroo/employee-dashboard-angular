@@ -12,23 +12,17 @@ import { faChartLine } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./app.component.scss'],
 })
 
-
-
 export class AppComponent {
   title = 'Razroo | Fully Architected Employee Dashboard';
 
+  faBell = faBell;
+  faQuestionCircle = faQuestionCircle;
+  faUserCircle = faUserCircle
 
+  faUserFriends = faUserFriends
+  faChartPie = faChartPie;
+  faClipboardList = faClipboardList;
+  faChartLine = faChartLine;
 
- faBell = faBell;
- faQuestionCircle = faQuestionCircle; 
- faUserCircle = faUserCircle
-
- faUserFriends = faUserFriends
- faChartPie = faChartPie;
- faClipboardList = faClipboardList;
- faChartLine = faChartLine;
-
- showFiller = false;
-
- 
+  showFiller = false;
 }
